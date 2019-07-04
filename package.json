@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-netlify",
+  "version": "1.0.0",
+  "description": "A serverless function to process stripe payments with Nuxt, Netlify, and Lambda",
+  "author": "sdras",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
