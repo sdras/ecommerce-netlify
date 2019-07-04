@@ -1,41 +1,18 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        ecommerce-netlify
-      </h1>
-      <h2 class="subtitle">
-        A serverless function to process stripe payments with Nuxt, Netlify, and Lambda
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    Hi there.
+    <app-card />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import AppCard from "~/components/AppCard.vue";
 
 export default {
   components: {
-    Logo
+    AppCard
   }
-}
+};
 </script>
 
 <style>
@@ -49,8 +26,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
