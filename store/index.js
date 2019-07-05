@@ -7,12 +7,6 @@ export const state = () => ({
   cartCount: 0
 })
 
-// export const getters = {
-//   getterValue: state => {
-//     return state.value
-//   }
-// }
-
 export const mutations = {
   updateCartUI: (state, payload) => {
     state.cartUIStatus = payload
@@ -42,10 +36,10 @@ export const actions = {
             }
           }
         )
-        .then(response => {
+        .then(res => {
           commit("updateCartUI", "success")
           commit("clearCartCount")
-          console.log(JSON.stringify(response, null, 2))
+          console.log(JSON.stringify(res, null, 2))
         })
     } catch (err) {
       console.log(err)
