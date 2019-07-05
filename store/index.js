@@ -18,7 +18,7 @@ export const mutations = {
 
 export const actions = {
   async postStripeFunction({ state, commit }, payload) {
-    console.log(payload)
+    commit("updateCartUI", "loading")
 
     try {
       await axios
@@ -37,8 +37,13 @@ export const actions = {
           }
         )
         .then(res => {
-          commit("updateCartUI", "success")
-          commit("clearCartCount")
+          if (res.statusCode === 200) {
+            commit("updateCartUI", "success")
+            commit("clearCartCount")
+          } else {
+            commit("updateCartUI", "failure")
+          }
+
           console.log(JSON.stringify(res, null, 2))
         })
     } catch (err) {

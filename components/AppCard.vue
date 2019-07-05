@@ -35,6 +35,10 @@
         <h4>Please hold, we're filling up your cart with goodies</h4>
         <p>Placeholder loader</p>
       </div>
+
+      <div v-else-if="cartUIStatus === 'success'" class="loadcontain">
+        <h4>Success!</h4>
+      </div>
     </div>
   </div>
 </template>
