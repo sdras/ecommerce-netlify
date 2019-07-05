@@ -42,7 +42,7 @@ exports.handler = async (event, context) => {
         console.log(
           "starting the charges: " + data.stripeAmt + " : " + data.stripeEmail
         )
-        stripe.charges.create(
+        await stripe.charges.create(
           {
             currency: "usd",
             amount: data.stripeAmt,
@@ -53,7 +53,9 @@ exports.handler = async (event, context) => {
           {
             idempotency_key: data.stripeIdempotency
           }
-        )
+        ).then(stuff => {
+          console.log("Charge created: " + stuff)
+        })
       })
 
     return {
