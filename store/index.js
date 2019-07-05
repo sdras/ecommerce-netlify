@@ -37,7 +37,7 @@ export const actions = {
           }
         )
         .then(res => {
-          if (res.statusCode === 200) {
+          if (res.status === 200) {
             commit("updateCartUI", "success")
             commit("clearCartCount")
           } else {
