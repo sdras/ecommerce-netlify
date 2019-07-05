@@ -24,7 +24,7 @@ export const mutations = {
 
 export const actions = {
   async postStripeFunction({ state, commit }, payload) {
-    console.log(payload.data.token)
+    console.log(payload)
 
     try {
       axios
