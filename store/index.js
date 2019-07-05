@@ -18,7 +18,7 @@ export const mutations = {
     state.cartUIStatus = payload
   },
   clearCartCount: state => {
-    ;(state.cartCount = 0), (state.totalAmt = 0), (cartUIStatus = "idle")
+    ;(state.cartCount = 0), (state.totalAmt = 0), (state.cartUIStatus = "idle")
   }
 }
 
@@ -32,9 +32,9 @@ export const actions = {
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
             stripeEmail: payload.stripeEmail,
-            stripeToken: "tok_visa", //testing token, later we would use payload.data.token
             stripeAmt: state.stripeAmt,
-            stripeIdempotency: uuidv1()
+            stripeToken: "tok_visa", //testing token, later we would use payload.data.token
+            stripeIdempotency: uuidv1() //we use this library to create a unique id
           },
           {
             headers: {
