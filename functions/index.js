@@ -39,7 +39,9 @@ exports.handler = async (event, context) => {
         source: data.stripeToken
       })
       .then(customer => {
-        console.log("starting the charges")
+        console.log(
+          "starting the charges: " + data.stripeAmt + " : " + data.stripeEmail
+        )
         stripe.charges.create(
           {
             currency: "usd",
