@@ -18,6 +18,7 @@
     "nuxt": "^2.0.0",
     "sass-loader": "^7.1.0",
     "stripe": "^7.4.0",
+    "uuid": "^3.3.2",
     "vue-stripe-elements-plus": "^0.2.10"
   },
   "devDependencies": {

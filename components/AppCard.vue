@@ -42,6 +42,8 @@
 <script>
 import { Card, createToken } from "vue-stripe-elements-plus";
 import axios from "axios";
+import uuidv1 from "uuid/v1";
+//const uuidv1 = require('uuid/v1');
 
 export default {
   data() {
@@ -69,7 +71,8 @@ export default {
             {
               stripeEmail: this.stripeEmail,
               stripeToken: "tok_visa", //testing token
-              stripeAmt: 50
+              stripeAmt: 50,
+              stripeIdempotency: uuidv1()
             },
             {
               headers: {
