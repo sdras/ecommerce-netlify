@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "missing-information"
+        status: "missing information"
       })
     }
   }
@@ -40,7 +40,9 @@ exports.handler = async (event, context) => {
       })
       .then(customer => {
         console.log(
-          "starting the charges: " + data.stripeAmt + " : " + data.stripeEmail
+          `starting the charges, amt: ${data.stripeAmt}, email: ${
+            data.stripeEmail
+          }`
         )
         return stripe.charges
           .create(
@@ -55,8 +57,8 @@ exports.handler = async (event, context) => {
               idempotency_key: data.stripeIdempotency
             }
           )
-          .then(stuff => {
-            console.log("Charge created: " + stuff)
+          .then(result => {
+            console.log(`Charge created: ${result}`)
           })
       })
 

@@ -45,7 +45,12 @@ import axios from "axios";
 import uuidv1 from "uuid/v1";
 //const uuidv1 = require('uuid/v1');
 
+import { mapState } from "vuex";
+
 export default {
+  computed: {
+    ...mapState(["cartUIStatus"])
+  },
   data() {
     return {
       submitted: false,
