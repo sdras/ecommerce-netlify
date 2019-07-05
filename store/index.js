@@ -26,7 +26,7 @@ export const actions = {
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
             stripeEmail: payload.stripeEmail,
-            stripeAmt: state.stripeAmt,
+            stripeAmt: state.totalAmt,
             stripeToken: "tok_visa", //testing token, later we would use payload.data.token
             stripeIdempotency: uuidv1() //we use this library to create a unique id
           },
