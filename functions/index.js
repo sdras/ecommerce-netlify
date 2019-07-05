@@ -44,6 +44,7 @@ exports.handler = async (event, context) => {
             currency: "usd",
             amount: data.stripeAmt,
             receipt_email: data.stripeEmail,
+            customer: customer.id,
             description: "Sample Charge"
           },
           {
