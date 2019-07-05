@@ -18,7 +18,7 @@ export const mutations = {
     state.cartUIStatus = payload
   },
   clearCartCount: state => {
-    state.cartCount = 0
+    ;(state.cartCount = 0), (state.totalAmt = 0), (cartUIStatus = "idle")
   }
 }
 

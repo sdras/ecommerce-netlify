@@ -45,15 +45,13 @@ import { Card, createToken } from "vue-stripe-elements-plus";
 import { mapState } from "vuex";
 
 export default {
+  components: { Card },
   computed: {
     ...mapState(["cartUIStatus"])
   },
   data() {
     return {
-      submitted: false,
       complete: false,
-      status: "",
-      response: "",
       stripeOptions: {
         // you can configure that cc element. I liked the default, but you can
         // see https://stripe.com/docs/stripe.js#element-options for details
@@ -61,7 +59,6 @@ export default {
       stripeEmail: ""
     };
   },
-  components: { Card },
   methods: {
     pay() {
       createToken().then(data => {
@@ -70,10 +67,8 @@ export default {
       });
     },
     clearCart() {
-      this.submitted = false;
-      this.status = "";
       this.complete = false;
-      this.response = "";
+      this.$store.commit("clearCartCount");
     }
   }
 };
