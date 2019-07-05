@@ -1,11 +1,10 @@
 require("dotenv").config()
 
-// stripe testing key
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "Content-Type"
-}
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY),
+  headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type"
+  }
 
 exports.handler = async (event, context) => {
   if (!event.body || event.httpMethod !== "POST") {
@@ -33,32 +32,42 @@ exports.handler = async (event, context) => {
   }
 
   // stripe payment processing begins here
-  let charge
-
   try {
-    charge = await stripe.charges.create(
-      {
-        currency: "usd",
-        amount: data.stripeAmt,
-        receipt_email: data.stripeEmail,
-        description: "Sample Charge"
-      },
-      {
-        idempotency_key: data.stripeIdempotency
-      }
-    )
+    await stripe.customers
+      .create({
+        email: data.stripeEmail,
+        source: data.stripeToken
+      })
+      .then(customer => {
+        stripe.charges.create(
+          {
+            currency: "usd",
+            amount: data.stripeAmt,
+            receipt_email: data.stripeEmail,
+            description: "Sample Charge"
+          },
+          {
+            idempotency_key: data.stripeIdempotency
+          }
+        )
+      })
+
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({
+        status: "it works! beep boop"
+      })
+    }
   } catch (err) {
     console.log(err)
-  }
 
-  const status =
-    !charge || charge.status !== "succeeded" ? "failed" : charge.status
-
-  return {
-    statusCode: 200,
-    headers,
-    body: JSON.stringify({
-      status
-    })
+    return {
+      statusCode: 400,
+      headers,
+      body: JSON.stringify({
+        status: err
+      })
+    }
   }
 }
