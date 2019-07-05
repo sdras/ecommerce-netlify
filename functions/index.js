@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
 
   const data = JSON.parse(event.body)
 
-  if (!data.token || !data.amount || !data.idempotency_key) {
+  if (!data.stripeToken || !data.stripeAmt || !data.stripeIdempotency) {
     console.error("Required information is missing.")
 
     return {
@@ -43,7 +43,7 @@ exports.handler = async (event, context) => {
         customer: 1
       },
       {
-        idempotency_key: data.idempotency_key
+        idempotency_key: data.stripeIdempotency
       }
     )
   } catch (err) {
