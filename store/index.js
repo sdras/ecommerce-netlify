@@ -27,7 +27,7 @@ export const actions = {
     console.log(payload)
 
     try {
-      axios
+      await axios
         .post(
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
