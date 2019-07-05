@@ -32,15 +32,16 @@ exports.handler = async (event, context) => {
     }
   }
 
-  /* Do stripe payment processing */
+  // stripe payment processing begins here
   let charge
+
   try {
     charge = await stripe.charges.create(
       {
         currency: "usd",
         amount: data.stripeAmt,
-        description: "Sample Charge",
-        customer: 1
+        receipt_email: data.stripeEmail,
+        description: "Sample Charge"
       },
       {
         idempotency_key: data.stripeIdempotency
@@ -49,13 +50,15 @@ exports.handler = async (event, context) => {
   } catch (err) {
     console.log(err)
   }
+
   const status =
     !charge || charge.status !== "succeeded" ? "failed" : charge.status
+
   return {
     statusCode: 200,
     headers,
     body: JSON.stringify({
-      status: status
+      status
     })
   }
 }
