@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "invalid-method"
+        status: "invalid http method"
       })
     }
   }
@@ -39,6 +39,7 @@ exports.handler = async (event, context) => {
         source: data.stripeToken
       })
       .then(customer => {
+        console.log("starting the charges")
         stripe.charges.create(
           {
             currency: "usd",
