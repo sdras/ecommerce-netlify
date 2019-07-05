@@ -2,65 +2,60 @@ require("dotenv").config()
 
 // stripe testing key
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
-const statusCode = 200
 const headers = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "Content-Type"
 }
 
 exports.handler = async (event, context) => {
-  if (event.httpMethod !== "POST" || !event.body) {
+  if (!event.body || event.httpMethod !== "POST") {
     return {
-      statusCode,
+      statusCode: 400,
       headers,
       body: JSON.stringify({
-        message: "Wrong type of HTTP method"
+        status: "invalid-method"
       })
     }
   }
 
-  console.log("starting to get down")
+  const data = JSON.parse(event.body)
 
-  //if we have an event body, an email, and a token, let's get started
-  if (
-    event.body &&
-    event.body.stripeEmail &&
-    event.body.stripeToken &&
-    event.body.stripeAmt
-  ) {
-    stripe.customers
-      .create({
-        email: event.body.stripeEmail,
-        source: event.body.stripeToken
-      })
-      .then(customer => {
-        console.log("starting the stripe charges")
-        stripe.charges.create({
-          amount: event.body.stripeAmt,
-          description: "Sample Charge",
-          currency: "usd",
-          customer: 1
-        })
-      })
-      .then(charge => {
-        console.log("finished the stripe charges")
-        return {
-          statusCode,
-          body: JSON.stringify({
-            message: "This has been completed"
-          })
-        }
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  } else {
-    console.log(event.body)
+  if (!data.token || !data.amount || !data.idempotency_key) {
+    console.error("Required information is missing.")
+
     return {
       statusCode: 400,
+      headers,
       body: JSON.stringify({
-        message: "We're missing something"
+        status: "missing-information"
       })
     }
+  }
+
+  /* Do stripe payment processing */
+  let charge
+  try {
+    charge = await stripe.charges.create(
+      {
+        currency: "usd",
+        amount: data.stripeAmt,
+        description: "Sample Charge",
+        customer: 1
+      },
+      {
+        idempotency_key: data.idempotency_key
+      }
+    )
+  } catch (err) {
+    console.log(err)
+  }
+  const status =
+    !charge || charge.status !== "succeeded" ? "failed" : charge.status
+  return {
+    statusCode: 200,
+    headers,
+    body: JSON.stringify({
+      status: status
+    })
   }
 }
