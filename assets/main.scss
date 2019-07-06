@@ -46,3 +46,20 @@ a:visited {
   text-decoration: none;
   transition: 0.3s all ease;
 }
+
+button.multi-item {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: 0.3s all ease;
+  &:hover {
+    background: black;
+    border: 1px solid black;
+    color: white;
+  }
+}

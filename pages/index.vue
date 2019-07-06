@@ -2,7 +2,6 @@
   <div>
     <app-textlockup />
     <app-sales-boxes />
-    <app-featured-products />
     <app-textlockup>
       <template v-slot:img>
         <img src="/bag.jpg" alt="bag" />
@@ -12,6 +11,7 @@
       <template v-slot:collection>Summer</template>
       <template v-slot:details>All accessories</template>
     </app-textlockup>
+    <app-featured-products />
   </div>
 </template>
 
