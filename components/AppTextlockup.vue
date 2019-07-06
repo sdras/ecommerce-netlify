@@ -25,9 +25,8 @@ export default {};
   grid-row-gap: 0px;
   .new {
     grid-area: 1 / 1 / 5 / 4;
-    font-size: 280px;
+    font-size: 230px;
     color: #efefef;
-    margin-top: -50px;
     text-transform: uppercase;
   }
   .sale {
