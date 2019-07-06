@@ -15,6 +15,9 @@ export const getters = {
   },
   women: state => {
     return state.storedata.filter(el => el.gender === "female")
+  },
+  men: state => {
+    return state.storedata.filter(el => el.gender === "male")
   }
 }
 

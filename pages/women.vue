@@ -1,9 +1,21 @@
 <template>
-  <div></div>
+  <div>
+    <app-store-grid :data="women" />
+  </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+import AppStoreGrid from "~/components/AppStoreGrid.vue";
+
+export default {
+  components: {
+    AppStoreGrid
+  },
+  computed: {
+    ...mapGetters(["women"])
+  }
+};
 </script>
 
 <style lang="scss" scoped>
