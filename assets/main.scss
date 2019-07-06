@@ -63,3 +63,49 @@ button.multi-item {
     color: white;
   }
 }
+
+/*------------  Store Grid   -----------*/
+
+.storegrid {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px;
+}
+
+/* no grid support */
+aside {
+  float: left;
+  width: 19.1489%;
+}
+
+.content {
+  /*no grid support*/
+  float: right;
+  width: 79.7872%;
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+  aside {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .content {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

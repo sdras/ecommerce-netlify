@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 main {
   width: 80vw;
   margin-left: 10vw;
