@@ -14,10 +14,10 @@ export const getters = {
     return state.storedata.slice(0, 3)
   },
   women: state => {
-    return state.storedata.filter(el => el.gender === "female")
+    return state.storedata.filter(el => el.gender === "Female")
   },
   men: state => {
-    return state.storedata.filter(el => el.gender === "male")
+    return state.storedata.filter(el => el.gender === "Male")
   }
 }
 
