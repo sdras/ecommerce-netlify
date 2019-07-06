@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Your Cart</h1>
+
     <app-card />
   </div>
 </template>
