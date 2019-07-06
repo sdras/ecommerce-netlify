@@ -1,7 +1,7 @@
 <template>
   <div class="storegrid">
     <section class="content">
-      <div v-for="item in storedata" :key="item.id">
+      <div v-for="item in storedata" :key="item.id" class="item">
         <img :src="`/products/${item.img}`" />
         <h3>{{ item.name }}</h3>
         <h4>$50.00</h4>
@@ -28,16 +28,22 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  background: red;
   height: 100%;
   width: 100%;
+}
+
+.item {
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   img {
     width: 100%;
   }
 }
 
 aside {
-  background: purple;
   height: 100%;
   width: 100%;
 }

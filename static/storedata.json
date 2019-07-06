@@ -7,6 +7,7 @@
     "name": "Desi Avramovitz",
     "review": "productize virtual markets",
     "starrating": 3,
+    "price": 50.4,
     "img": "1.jpg"
   },
   {
@@ -17,6 +18,7 @@
     "name": "Addy Alldre",
     "review": "deploy efficient mindshare",
     "starrating": 4,
+    "price": 33.99,
     "img": "2.jpg"
   },
   {
@@ -27,6 +29,7 @@
     "name": "Bernie Gledhill",
     "review": "mesh sticky content",
     "starrating": 3,
+    "price": 102.99,
     "img": "3.jpg"
   },
   {
@@ -37,6 +40,7 @@
     "name": "Gwendolen Bickerstaffe",
     "review": "integrate front-end infomediaries",
     "starrating": 5,
+    "price": 64.5,
     "img": "4.jpg"
   },
   {
@@ -47,6 +51,7 @@
     "name": "Cristian Gilbanks",
     "review": "integrate extensible methodologies",
     "starrating": 5,
+    "price": 30.99,
     "img": "5.png"
   },
   {
@@ -57,6 +62,7 @@
     "name": "Kalila Gooms",
     "review": "utilize end-to-end functionalities",
     "starrating": 4,
+    "price": 19.99,
     "img": "6.png"
   },
   {
@@ -67,6 +73,7 @@
     "name": "Bartolemo Peckitt",
     "review": "enable cutting-edge e-services",
     "starrating": 3,
+    "price": 130.0,
     "img": "7.png"
   },
   {
@@ -77,6 +84,7 @@
     "name": "Kathye Haith",
     "review": "innovate sexy portals",
     "starrating": 4,
+    "price": 120.99,
     "img": "8.png"
   },
   {
@@ -87,6 +95,7 @@
     "name": "Armin Basilio",
     "review": "transform robust mindshare",
     "starrating": 5,
+    "price": 20.99,
     "img": "9.png"
   },
   {
@@ -97,6 +106,7 @@
     "name": "Cal Sterman",
     "review": "benchmark synergistic bandwidth",
     "starrating": 3,
+    "price": 50.0,
     "img": "10.jpg"
   },
   {
@@ -107,6 +117,7 @@
     "name": "Ardine Imlaw",
     "review": "repurpose robust e-business",
     "starrating": 4,
+    "price": 65.0,
     "img": "11.png"
   },
   {
@@ -117,6 +128,7 @@
     "name": "Noella Ruddom",
     "review": "redefine 24/365 eyeballs",
     "starrating": 3,
+    "price": 72.0,
     "img": "12.png"
   },
   {
@@ -127,6 +139,7 @@
     "name": "Kirstyn Espadate",
     "review": "empower sticky web-readiness",
     "starrating": 4,
+    "price": 59.99,
     "img": "13.png"
   },
   {
@@ -137,6 +150,7 @@
     "name": "Rourke Greet",
     "review": "deliver end-to-end solutions",
     "starrating": 5,
+    "price": 49.99,
     "img": "14.png"
   },
   {
@@ -147,6 +161,7 @@
     "name": "Arden Stockbridge",
     "review": "orchestrate value-added infrastructures",
     "starrating": 4,
+    "price": 100.0,
     "img": "15.png"
   },
   {
@@ -157,6 +172,7 @@
     "name": "Sheffy Gunter",
     "review": "revolutionize vertical systems",
     "starrating": 5,
+    "price": 33.99,
     "img": "16.jpg"
   },
   {
@@ -167,6 +183,7 @@
     "name": "Alexine Mulligan",
     "review": "architect real-time partnerships",
     "starrating": 3,
+    "price": 13.99,
     "img": "17.png"
   },
   {
@@ -177,6 +194,7 @@
     "name": "Micheline Charlson",
     "review": "innovate holistic markets",
     "starrating": 4,
+    "price": 12.99,
     "img": "18.jpg"
   },
   {
@@ -187,6 +205,7 @@
     "name": "Hughie Jeffryes",
     "review": "facilitate innovative portals",
     "starrating": 3,
+    "price": 154.99,
     "img": "19.png"
   },
   {
@@ -197,6 +216,7 @@
     "name": "Chet Corke",
     "review": "unleash synergistic models",
     "starrating": 5,
+    "price": 33.99,
     "img": "1.jpg"
   },
   {
@@ -207,6 +227,7 @@
     "name": "Kamila Yggo",
     "review": "unleash strategic platforms",
     "starrating": 4,
+    "price": 50.99,
     "img": "2.jpg"
   },
   {
@@ -216,6 +237,8 @@
     "gender": "Female",
     "name": "Kandace Strickett",
     "review": "orchestrate visionary paradigms",
+    "starrating": 4,
+    "price": 50.99,
     "img": "3.jpg"
   },
   {
@@ -225,6 +248,8 @@
     "gender": "Male",
     "name": "Kellby Arlott",
     "review": "enhance rich initiatives",
+    "starrating": 4,
+    "price": 19.99,
     "img": "4.jpg"
   },
   {
@@ -235,6 +260,7 @@
     "name": "Bogey Cheyne",
     "review": "benchmark mission-critical convergence",
     "starrating": 5,
+    "price": 110.0,
     "img": "5.png"
   },
   {
@@ -245,6 +271,7 @@
     "name": "Sybila Ehlerding",
     "review": "aggregate granular systems",
     "starrating": 3,
+    "price": 19.99,
     "img": "6.png"
   },
   {
@@ -255,6 +282,7 @@
     "name": "Hadrian Hambatch",
     "review": "transition granular markets",
     "starrating": 3,
+    "price": 190.99,
     "img": "7.png"
   },
   {
@@ -265,6 +293,7 @@
     "name": "Franciska Hallett",
     "review": "generate customized e-services",
     "starrating": 4,
+    "price": 20.0,
     "img": "8.png"
   },
   {
@@ -275,6 +304,7 @@
     "name": "Andrej Wilfing",
     "review": "e-enable viral web services",
     "starrating": 3,
+    "price": 15.99,
     "img": "9.png"
   },
   {
@@ -285,6 +315,7 @@
     "name": "Rori Marishenko",
     "review": "recontextualize B2B markets",
     "starrating": 3,
+    "price": 190.0,
     "img": "10.jpg"
   },
   {
@@ -295,6 +326,7 @@
     "name": "Silas Cornwell",
     "review": "architect collaborative initiatives",
     "starrating": 3,
+    "price": 35.99,
     "img": "11.png"
   }
 ]

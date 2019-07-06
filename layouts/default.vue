@@ -20,6 +20,6 @@ export default {
 <style scoped>
 main {
   width: 80vw;
-  margin-left: 10vw;
+  margin-left: 7vw;
 }
 </style>
