@@ -9,6 +9,12 @@ export const state = () => ({
   storedata: data
 })
 
+export const getters = {
+  featuredProducts: state => {
+    return state.storedata.slice(0, 3)
+  }
+}
+
 export const mutations = {
   updateCartUI: (state, payload) => {
     state.cartUIStatus = payload

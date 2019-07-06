@@ -2,6 +2,7 @@
   <div>
     <app-textlockup />
     <app-sales-boxes />
+    <app-featured-products />
     <app-textlockup>
       <template v-slot:img>
         <img src="/bag.jpg" alt="bag" />
@@ -17,11 +18,13 @@
 <script>
 import AppTextlockup from "~/components/AppTextlockup.vue";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
+import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
     AppTextlockup,
-    AppSalesBoxes
+    AppSalesBoxes,
+    AppFeaturedProducts
   }
 };
 </script>
