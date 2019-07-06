@@ -13,7 +13,11 @@
           :show-rating="false"
           style="margin: 5px 0"
         ></star-rating>
+        <h4 class="price">${{ product.price }}</h4>
         <p>{{ product.description }}</p>
+        <hr />Available in additional colors:
+        <span class="color">{{ product.color }}</span>
+        <hr />
       </section>
     </section>
     <app-sales-boxes />

@@ -65,15 +65,6 @@ export default {
   margin: 20px 0;
 }
 
-.price {
-  color: #d96528;
-  font-size: 20px;
-  margin: 5px 0;
-  font-weight: normal;
-  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-}
-
 aside {
   height: 100%;
   width: 100%;
