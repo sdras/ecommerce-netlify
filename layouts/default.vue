@@ -18,7 +18,7 @@ html {
 }
 
 h1 {
-  font-family: "Contrail One", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
