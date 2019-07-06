@@ -21,7 +21,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=DM+Sans|DM+Serif+Display&display=swap"
+          "https://fonts.googleapis.com/css?family=Didact+Gothic|PT+Serif&display=swap"
       }
     ]
   },

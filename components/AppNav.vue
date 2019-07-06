@@ -1,7 +1,6 @@
 <template>
   <header>
     <h1>Skyline Ivy</h1>
-    <p>Hi there I'm a slogan.</p>
     <nav>
       <ul>
         <li>

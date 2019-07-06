@@ -25,22 +25,23 @@ export default {};
   grid-row-gap: 0px;
   .new {
     grid-area: 1 / 1 / 5 / 4;
-    font-size: 220px;
-    color: #eee;
+    font-size: 280px;
+    color: #efefef;
+    margin-top: -50px;
     text-transform: uppercase;
   }
   .sale {
     grid-area: 2 / 2 / 3 / 4;
     font-size: 60px;
     color: #d96528;
-    font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   .collection {
     grid-area: 3 / 3 / 4 / 4;
     font-size: 80px;
-    font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   .details {
     grid-area: 4 / 2 / 5 / 4;
