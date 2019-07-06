@@ -1,7 +1,9 @@
 <template>
   <div>
     <app-nav />
-    <nuxt />
+    <main>
+      <nuxt />
+    </main>
   </div>
 </template>
 
@@ -15,6 +17,9 @@ export default {
 };
 </script>
 
-
 <style>
+main {
+  width: 80vw;
+  margin-left: 10vw;
+}
 </style>

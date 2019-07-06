@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <app-textlockup />
     <app-sales-boxes />
     <app-textlockup>
@@ -11,7 +11,7 @@
       <template v-slot:collection>Summer</template>
       <template v-slot:details>All accessories</template>
     </app-textlockup>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -32,6 +32,6 @@ export default {
 }
 
 main {
-  width: 80vw;
+  width: 75vw;
 }
 </style>

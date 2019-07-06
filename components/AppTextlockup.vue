@@ -26,8 +26,6 @@ export default {};
 
 <style lang="scss" scoped>
 .textlockup {
-  width: 80vw;
-  margin-left: 10vw;
   display: grid;
   grid-template-columns: 50px 100px 1fr;
   grid-template-rows: 50px 50px 100px 20px 1fr;
@@ -60,6 +58,9 @@ export default {};
   }
   .img {
     grid-area: 1 / 3 / 6 / 4;
+    img {
+      width: 95%;
+    }
   }
 }
 </style>
