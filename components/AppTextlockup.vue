@@ -1,12 +1,12 @@
 <template>
   <div class="textlockup">
+    <div class="img">
+      <img src="/shoe1.jpg" alt="shoe" />
+    </div>
     <div class="new">New</div>
     <div class="sale">Men Shoes</div>
     <div class="collection">Collection</div>
     <div class="details">Street Style New Fashion</div>
-    <div class="img">
-      <img src="/shoe1.jpg" alt="shoe" />
-    </div>
   </div>
 </template>
 
@@ -16,30 +16,36 @@ export default {};
 
 <style lang="scss" scoped>
 .textlockup {
+  width: 80vw;
+  margin-left: 10vw;
   display: grid;
   grid-template-columns: 50px 100px 1fr;
-  grid-template-rows: 30px 50px 70px 20px 1fr;
+  grid-template-rows: 50px 50px 100px 20px 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   .new {
     grid-area: 1 / 1 / 5 / 4;
-    font-size: 100px;
-    color: #ccc;
+    font-size: 220px;
+    color: #eee;
     text-transform: uppercase;
   }
   .sale {
     grid-area: 2 / 2 / 3 / 4;
-    font-size: 30px;
-    color: orangered;
+    font-size: 60px;
+    color: #d96528;
+    font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   .collection {
     grid-area: 3 / 3 / 4 / 4;
-    font-size: 40px;
+    font-size: 80px;
+    font-family: "DM Serif Display", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
   .details {
     grid-area: 4 / 2 / 5 / 4;
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 20px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
   .img {
