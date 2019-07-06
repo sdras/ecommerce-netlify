@@ -1,6 +1,7 @@
 <template>
   <header>
-    <h1>Brand Name here</h1>
+    <h1>Skyline Ivy</h1>
+    <p>Hi there I'm a slogan.</p>
     <nav>
       <ul>
         <li>
