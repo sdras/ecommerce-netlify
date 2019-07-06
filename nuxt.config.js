@@ -13,6 +13,11 @@ export default {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Changa+One|Contrail+One|DM+Sans|DM+Serif+Display|Paytone+One|Rubik&display=swap"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
@@ -24,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ["assets/main.scss"],
   /*
    ** Plugins to load before mounting the App
    */
