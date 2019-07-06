@@ -24,14 +24,15 @@
         </p>
         <hr />
         <p>
-          <strong>Available in additional colors:</strong>
-          <span :style="`color: ${product.color}`">{{ product.color }}</span>
+          Available in additional colors:
+          <strong>
+            <span :style="`color: ${product.color}`">{{ product.color }}</span>
+          </strong>
         </p>
         <hr />
       </section>
     </section>
     <app-sales-boxes />
-    <app-featured-products />
   </div>
 </template>
 
@@ -39,13 +40,11 @@
 import { mapState } from "vuex";
 import StarRating from "vue-star-rating";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
-import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
     StarRating,
-    AppSalesBoxes,
-    AppFeaturedProducts
+    AppSalesBoxes
   },
   data() {
     return {

@@ -3,7 +3,9 @@
     <section class="content">
       <div v-for="item in data" :key="item.id" class="item">
         <div class="img-contain">
-          <img :src="`/products/${item.img}`" />
+          <NuxtLink :to="`product/${item.id}`">
+            <img :src="`/products/${item.img}`" />
+          </NuxtLink>
         </div>
         <star-rating
           :rating="item.starrating"
