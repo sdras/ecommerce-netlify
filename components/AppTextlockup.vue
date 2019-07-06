@@ -1,12 +1,22 @@
 <template>
   <div class="textlockup">
     <div class="img">
-      <img src="/shoe1.jpg" alt="shoe" />
+      <slot name="img">
+        <img src="/shoe1.jpg" alt="shoe" />
+      </slot>
     </div>
-    <div class="new">New</div>
-    <div class="sale">Men Shoes</div>
-    <div class="collection">Collection</div>
-    <div class="details">Street Style New Fashion</div>
+    <div class="new">
+      <slot name="new">New</slot>
+    </div>
+    <div class="sale">
+      <slot name="sale">Men Shoes</slot>
+    </div>
+    <div class="collection">
+      <slot name="collection">Collection</slot>
+    </div>
+    <div class="details">
+      <slot name="details">Street Style New Fashion</slot>
+    </div>
   </div>
 </template>
 
