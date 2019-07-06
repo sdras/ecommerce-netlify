@@ -1,10 +1,12 @@
 import axios from "axios"
 import uuidv1 from "uuid/v1"
+import data from "~/static/storedata.json"
 
 export const state = () => ({
   cartUIStatus: "idle",
   totalAmt: 50,
-  cartCount: 0
+  cartCount: 0,
+  storedata: data
 })
 
 export const mutations = {
