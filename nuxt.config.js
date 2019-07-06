@@ -17,7 +17,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Changa+One|Contrail+One|DM+Sans|DM+Serif+Display|Paytone+One|Rubik&display=swap"
+          "https://fonts.googleapis.com/css?family=DM+Sans|DM+Serif+Display&display=swap"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
