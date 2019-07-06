@@ -43,4 +43,6 @@ a,
 a:active,
 a:visited {
   color: $brandprimary;
+  text-decoration: none;
+  transition: 0.3s all ease;
 }
