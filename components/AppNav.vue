@@ -7,6 +7,9 @@
           <nuxt-link exact to="/">Home</nuxt-link>
         </li>
         <li>
+          <nuxt-link to="/all">All</nuxt-link>
+        </li>
+        <li>
           <nuxt-link to="/women">Women</nuxt-link>
         </li>
         <li>
