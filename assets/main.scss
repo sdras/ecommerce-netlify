@@ -1,6 +1,6 @@
 /*------------ Variables -----------*/
 
-$brandprimary: #c14103;
+$brandprimary: #d96528;
 $brandsecondary: #03c1c1;
 
 /*------------  Global   -----------*/
@@ -11,7 +11,7 @@ body {
   padding: 40px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.4;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -33,6 +33,10 @@ h1 {
   font-size: 40px;
 }
 
+p {
+  margin: 20px 0;
+}
+
 *,
 *:before,
 *:after {
@@ -48,7 +52,7 @@ a:visited {
   transition: 0.3s all ease;
 }
 
-button.multi-item {
+button {
   border: 1px solid #ccc;
   background: white;
   padding: 10px 14px;
@@ -65,13 +69,28 @@ button.multi-item {
   }
 }
 
+button.purchase {
+  background: $brandprimary;
+  color: white;
+  font-size: 16px;
+  border: none;
+  &:hover {
+    background: #c14103;
+  }
+}
+
 .price {
-  color: #d96528;
+  color: $brandprimary;
   font-size: 20px;
   margin: 5px 0;
   font-weight: normal;
   font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+}
+
+hr {
+  border-top: 1px solid #eee;
+  margin: 30px 0;
 }
 
 /*------------  Store Grid   -----------*/

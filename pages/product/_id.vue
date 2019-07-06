@@ -15,8 +15,18 @@
         ></star-rating>
         <h4 class="price">${{ product.price }}</h4>
         <p>{{ product.description }}</p>
-        <hr />Available in additional colors:
-        <span class="color">{{ product.color }}</span>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
+        <p>
+          <input type="number" v-model="quantity" />
+        </p>
+        <p>
+          <button class="button purchase">Add to Cart</button>
+        </p>
+        <hr />
+        <p>
+          <strong>Available in additional colors:</strong>
+          <span :style="`color: ${product.color}`">{{ product.color }}</span>
+        </p>
         <hr />
       </section>
     </section>
@@ -39,7 +49,9 @@ export default {
   },
   data() {
     return {
-      id: this.$route.params.id
+      id: this.$route.params.id,
+      quantity: 0,
+      tempcart: []
     };
   },
   computed: {
