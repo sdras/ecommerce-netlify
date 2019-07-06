@@ -6,7 +6,8 @@
     "gender": "Male",
     "name": "Desi Avramovitz",
     "review": "productize virtual markets",
-    "starrating": 3
+    "starrating": 3,
+    "img": "1.jpg"
   },
   {
     "id": "bfa86b1c-9ebf-4555-987f-7b8bf7d27be7",
@@ -15,7 +16,8 @@
     "gender": "Male",
     "name": "Addy Alldre",
     "review": "deploy efficient mindshare",
-    "starrating": 4
+    "starrating": 4,
+    "img": "2.jpg"
   },
   {
     "id": "eca6b1c7-6b8c-4416-aae0-98cecdc18e92",
@@ -24,7 +26,8 @@
     "gender": "Female",
     "name": "Bernie Gledhill",
     "review": "mesh sticky content",
-    "starrating": 3
+    "starrating": 3,
+    "img": "3.jpg"
   },
   {
     "id": "440e2eac-67ed-4407-993a-d9f6b7f15087",
@@ -33,7 +36,8 @@
     "gender": "Female",
     "name": "Gwendolen Bickerstaffe",
     "review": "integrate front-end infomediaries",
-    "starrating": 5
+    "starrating": 5,
+    "img": "4.jpg"
   },
   {
     "id": "38543b28-3b0e-4886-a108-b58419bcef94",
@@ -42,7 +46,8 @@
     "gender": "Male",
     "name": "Cristian Gilbanks",
     "review": "integrate extensible methodologies",
-    "starrating": 5
+    "starrating": 5,
+    "img": "5.png"
   },
   {
     "id": "3d16728f-4b1d-449a-b002-4dc23f32c0cd",
@@ -51,7 +56,8 @@
     "gender": "Female",
     "name": "Kalila Gooms",
     "review": "utilize end-to-end functionalities",
-    "starrating": 4
+    "starrating": 4,
+    "img": "6.png"
   },
   {
     "id": "0d5c91e6-8dbe-4c5b-b9fa-9e82986b1bdc",
@@ -60,7 +66,8 @@
     "gender": "Male",
     "name": "Bartolemo Peckitt",
     "review": "enable cutting-edge e-services",
-    "starrating": 3
+    "starrating": 3,
+    "img": "7.png"
   },
   {
     "id": "80175256-93a1-41b8-9895-a890ed0c61d1",
@@ -69,7 +76,8 @@
     "gender": "Female",
     "name": "Kathye Haith",
     "review": "innovate sexy portals",
-    "starrating": 4
+    "starrating": 4,
+    "img": "8.png"
   },
   {
     "id": "b5438034-168a-4b51-9d2e-dd9fc336a242",
@@ -78,7 +86,8 @@
     "gender": "Male",
     "name": "Armin Basilio",
     "review": "transform robust mindshare",
-    "starrating": 5
+    "starrating": 5,
+    "img": "9.png"
   },
   {
     "id": "a5f39b32-e103-4e4a-ab73-0f719817b455",
@@ -87,7 +96,8 @@
     "gender": "Male",
     "name": "Cal Sterman",
     "review": "benchmark synergistic bandwidth",
-    "starrating": 3
+    "starrating": 3,
+    "img": "10.jpg"
   },
   {
     "id": "19bdee56-525a-4cb7-bfeb-c6f46b6d639a",
@@ -96,7 +106,8 @@
     "gender": "Female",
     "name": "Ardine Imlaw",
     "review": "repurpose robust e-business",
-    "starrating": 4
+    "starrating": 4,
+    "img": "11.png"
   },
   {
     "id": "f8b11f7c-1306-4658-a66c-d1704e728349",
@@ -105,7 +116,8 @@
     "gender": "Female",
     "name": "Noella Ruddom",
     "review": "redefine 24/365 eyeballs",
-    "starrating": 3
+    "starrating": 3,
+    "img": "12.png"
   },
   {
     "id": "14fcaf19-465e-4275-8c2e-c69219e68f8c",
@@ -114,7 +126,8 @@
     "gender": "Female",
     "name": "Kirstyn Espadate",
     "review": "empower sticky web-readiness",
-    "starrating": 4
+    "starrating": 4,
+    "img": "13.png"
   },
   {
     "id": "b1913a24-2556-4414-87cd-c6dcc3b98b53",
@@ -123,7 +136,8 @@
     "gender": "Male",
     "name": "Rourke Greet",
     "review": "deliver end-to-end solutions",
-    "starrating": 5
+    "starrating": 5,
+    "img": "14.png"
   },
   {
     "id": "143badca-e3f0-452f-b973-c3917a5f0f70",
@@ -132,7 +146,8 @@
     "gender": "Female",
     "name": "Arden Stockbridge",
     "review": "orchestrate value-added infrastructures",
-    "starrating": 4
+    "starrating": 4,
+    "img": "15.png"
   },
   {
     "id": "5cdef591-6b7f-4511-b59f-d0f55bdceeb9",
@@ -141,7 +156,8 @@
     "gender": "Male",
     "name": "Sheffy Gunter",
     "review": "revolutionize vertical systems",
-    "starrating": 5
+    "starrating": 5,
+    "img": "16.jpg"
   },
   {
     "id": "0bdf8654-7d44-46f5-bb1f-115b16b42344",
@@ -150,7 +166,8 @@
     "gender": "Female",
     "name": "Alexine Mulligan",
     "review": "architect real-time partnerships",
-    "starrating": 3
+    "starrating": 3,
+    "img": "17.png"
   },
   {
     "id": "a89719a0-4ee2-4ba0-8a75-12a1654a66b1",
@@ -159,7 +176,8 @@
     "gender": "Female",
     "name": "Micheline Charlson",
     "review": "innovate holistic markets",
-    "starrating": 4
+    "starrating": 4,
+    "img": "18.jpg"
   },
   {
     "id": "8aa13b42-b074-43d2-8dcc-f3f1010f3adb",
@@ -168,7 +186,8 @@
     "gender": "Male",
     "name": "Hughie Jeffryes",
     "review": "facilitate innovative portals",
-    "starrating": 3
+    "starrating": 3,
+    "img": "19.png"
   },
   {
     "id": "c8b03500-5f07-4fb3-a933-1ee205ccd903",
@@ -177,7 +196,8 @@
     "gender": "Male",
     "name": "Chet Corke",
     "review": "unleash synergistic models",
-    "starrating": 5
+    "starrating": 5,
+    "img": "1.jpg"
   },
   {
     "id": "85641bb6-04e5-4393-be3e-1d4dea46cd54",
@@ -186,7 +206,8 @@
     "gender": "Female",
     "name": "Kamila Yggo",
     "review": "unleash strategic platforms",
-    "starrating": 4
+    "starrating": 4,
+    "img": "2.jpg"
   },
   {
     "id": "1c8665b9-87cd-40d4-bc90-b28943825bd0",
@@ -195,7 +216,7 @@
     "gender": "Female",
     "name": "Kandace Strickett",
     "review": "orchestrate visionary paradigms",
-    "starrating": 3
+    "img": "3.jpg"
   },
   {
     "id": "e0bce42b-e2cf-4aa2-805b-f4bbd8517d2a",
@@ -204,7 +225,7 @@
     "gender": "Male",
     "name": "Kellby Arlott",
     "review": "enhance rich initiatives",
-    "starrating": 4
+    "img": "4.jpg"
   },
   {
     "id": "cc6998b6-4150-4234-b678-28460afc3a91",
@@ -213,7 +234,8 @@
     "gender": "Male",
     "name": "Bogey Cheyne",
     "review": "benchmark mission-critical convergence",
-    "starrating": 5
+    "starrating": 5,
+    "img": "5.png"
   },
   {
     "id": "69d95efa-af3a-40d2-8da1-1c8f8700a131",
@@ -222,7 +244,8 @@
     "gender": "Female",
     "name": "Sybila Ehlerding",
     "review": "aggregate granular systems",
-    "starrating": 3
+    "starrating": 3,
+    "img": "6.png"
   },
   {
     "id": "ab614297-fff2-4b34-bcf5-bc3c10127c63",
@@ -231,7 +254,8 @@
     "gender": "Male",
     "name": "Hadrian Hambatch",
     "review": "transition granular markets",
-    "starrating": 3
+    "starrating": 3,
+    "img": "7.png"
   },
   {
     "id": "18d4cd08-134f-4df5-a19a-b782a59ae52b",
@@ -240,7 +264,8 @@
     "gender": "Female",
     "name": "Franciska Hallett",
     "review": "generate customized e-services",
-    "starrating": 4
+    "starrating": 4,
+    "img": "8.png"
   },
   {
     "id": "92f8048f-3ee2-4428-96b0-66fd54b6e98f",
@@ -249,7 +274,8 @@
     "gender": "Male",
     "name": "Andrej Wilfing",
     "review": "e-enable viral web services",
-    "starrating": 3
+    "starrating": 3,
+    "img": "9.png"
   },
   {
     "id": "4cee7b59-30dd-4378-b1c0-e4ad055a6a19",
@@ -258,7 +284,8 @@
     "gender": "Female",
     "name": "Rori Marishenko",
     "review": "recontextualize B2B markets",
-    "starrating": 3
+    "starrating": 3,
+    "img": "10.jpg"
   },
   {
     "id": "f92c7d89-78e9-4616-8876-e0088c53483e",
@@ -267,186 +294,7 @@
     "gender": "Male",
     "name": "Silas Cornwell",
     "review": "architect collaborative initiatives",
-    "starrating": 3
-  },
-  {
-    "id": "abba9bb1-4367-4500-b606-9367ad3f9e63",
-    "color": "Teal",
-    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-    "gender": "Female",
-    "name": "Nedi Di Batista",
-    "review": "seize open-source ROI",
-    "starrating": 4
-  },
-  {
-    "id": "40d19e14-ffcf-4c32-884e-9105455e1eb2",
-    "color": "Puce",
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
-    "gender": "Male",
-    "name": "Jeffie Wesley",
-    "review": "productize B2B eyeballs",
-    "starrating": 4
-  },
-  {
-    "id": "8b0c8e54-1dc7-4879-ad1c-6800ff9ad466",
-    "color": "Teal",
-    "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "gender": "Male",
-    "name": "Derby Pethybridge",
-    "review": "transition 24/365 models",
-    "starrating": 3
-  },
-  {
-    "id": "0708dbd4-b92f-4667-9c0d-7fb2e8aafb97",
-    "color": "Red",
-    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "gender": "Male",
-    "name": "Jim Purshouse",
-    "review": "transform synergistic deliverables",
-    "starrating": 3
-  },
-  {
-    "id": "9e624bdf-32ee-44e1-bf13-0fe11aa7e259",
-    "color": "Green",
-    "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-    "gender": "Male",
-    "name": "Davon Mardoll",
-    "review": "empower user-centric mindshare",
-    "starrating": 3
-  },
-  {
-    "id": "a259f3bb-4fbf-4115-be3f-ac8c3965fa27",
-    "color": "Maroon",
-    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "gender": "Female",
-    "name": "Storm McCurrie",
-    "review": "synergize customized niches",
-    "starrating": 5
-  },
-  {
-    "id": "e283b9db-9c79-41e2-bf4d-b0b0be81fe66",
-    "color": "Khaki",
-    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-    "gender": "Female",
-    "name": "Miranda Bengal",
-    "review": "optimize customized channels",
-    "starrating": 5
-  },
-  {
-    "id": "a8c50a16-59c1-4446-80ef-c3edc0552347",
-    "color": "Green",
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "gender": "Male",
-    "name": "Erek Fowls",
-    "review": "optimize bleeding-edge convergence",
-    "starrating": 4
-  },
-  {
-    "id": "273555c3-4b58-4157-a2c2-6757b549bef3",
-    "color": "Puce",
-    "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "gender": "Male",
-    "name": "Barnard Golborn",
-    "review": "generate interactive paradigms",
-    "starrating": 5
-  },
-  {
-    "id": "298174fc-686a-4f0d-8e2e-7f8786bb5ac6",
-    "color": "Crimson",
-    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-    "gender": "Female",
-    "name": "Katha Studart",
-    "review": "exploit value-added e-tailers",
-    "starrating": 4
-  },
-  {
-    "id": "9640c107-d1e7-4475-b7fc-c85a70bee526",
-    "color": "Fuscia",
-    "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    "gender": "Male",
-    "name": "Arvin Keizman",
-    "review": "matrix ubiquitous bandwidth",
-    "starrating": 4
-  },
-  {
-    "id": "689b7aab-de50-48d0-81c5-a08a1446d770",
-    "color": "Aquamarine",
-    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-    "gender": "Male",
-    "name": "Tomkin McAlarney",
-    "review": "engage web-enabled e-business",
-    "starrating": 4
-  },
-  {
-    "id": "9e651f5f-875c-4736-810a-8f7efe645fe4",
-    "color": "Maroon",
-    "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-    "gender": "Male",
-    "name": "Sylvan Lennard",
-    "review": "iterate seamless web services",
-    "starrating": 3
-  },
-  {
-    "id": "edcb6ace-6a13-4afb-a7b1-3bd8086decb2",
-    "color": "Blue",
-    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "gender": "Male",
-    "name": "Cletus Gitthouse",
-    "review": "redefine seamless initiatives",
-    "starrating": 4
-  },
-  {
-    "id": "47f0ca8e-8912-442f-92fe-87b4756ee120",
-    "color": "Maroon",
-    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-    "gender": "Female",
-    "name": "Sibilla Keiley",
-    "review": "benchmark out-of-the-box e-markets",
-    "starrating": 3
-  },
-  {
-    "id": "cee5a5fc-3115-42dc-ba89-6556369aeac2",
-    "color": "Aquamarine",
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "gender": "Female",
-    "name": "Alia Guion",
-    "review": "deliver vertical schemas",
-    "starrating": 3
-  },
-  {
-    "id": "7d8e3d94-c83e-4f7f-87dd-fff92ebe9c49",
-    "color": "Indigo",
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-    "gender": "Male",
-    "name": "Quintin McGruar",
-    "review": "utilize cross-platform paradigms",
-    "starrating": 5
-  },
-  {
-    "id": "f5f372c9-1c4a-4af7-8902-f7601b189da4",
-    "color": "Aquamarine",
-    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "gender": "Male",
-    "name": "Nikki Edmonds",
-    "review": "engineer intuitive content",
-    "starrating": 3
-  },
-  {
-    "id": "6b2baf1f-56a7-400e-927c-ae768a1e3779",
-    "color": "Mauv",
-    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "gender": "Male",
-    "name": "Oswald Vial",
-    "review": "engineer revolutionary systems",
-    "starrating": 4
-  },
-  {
-    "id": "027f0be4-2df4-4e2a-b4e1-8184b4c2634b",
-    "color": "Turquoise",
-    "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    "gender": "Male",
-    "name": "Ilario de Glanville",
-    "review": "evolve out-of-the-box partnerships",
-    "starrating": 4
+    "starrating": 3,
+    "img": "11.png"
   }
 ]
