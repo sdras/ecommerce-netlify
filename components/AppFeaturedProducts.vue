@@ -7,7 +7,7 @@
       <div class="item" v-for="product in featuredProducts" :key="product.id">
         <img :src="`/products/${product.img}`" />
         <h3>{{ product.name }}</h3>
-        <h4>$50.00</h4>
+        <h4>${{ product.price }}</h4>
         <NuxtLink :to="`product/${product.id}`">
           <button class="multi-item">View Item ></button>
         </NuxtLink>
@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .featureditems {
+  width: 100%;
   margin: 20px 0 70px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -38,7 +39,7 @@ export default {
     border: 1px solid #eee2dc;
     box-shadow: 0 3px 10px 0px #eee;
     border-radius: 40px;
-    padding: 30px 50px 40px;
+    padding: 10px 20px 30px;
     min-height: 150px;
     justify-self: center;
     align-self: center;

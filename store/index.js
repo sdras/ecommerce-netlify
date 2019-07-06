@@ -12,6 +12,9 @@ export const state = () => ({
 export const getters = {
   featuredProducts: state => {
     return state.storedata.slice(0, 3)
+  },
+  women: state => {
+    return state.storedata.filter(el => el.gender === "female")
   }
 }
 
