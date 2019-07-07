@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="shopping">
-      <h2>01</h2>
+      <h2 :class="{ active: cartUIStatus === 'idle' }">01</h2>
       <h4>Shopping Cart</h4>
     </div>
     <div class="checkout">
@@ -16,13 +16,19 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState(["cartUIStatus"])
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 100px;
   grid-row-gap: 0px;
@@ -43,6 +49,11 @@ h2 {
   border: 1px solid #ccc;
   padding-top: 21px;
   color: #555;
+  &.active {
+    background: #d96528;
+    border: 1px solid #d96528;
+    color: white;
+  }
 }
 
 h4 {
