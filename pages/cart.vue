@@ -1,43 +1,54 @@
 <template>
   <div>
-    <h1>Your Cart</h1>
-    <table>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-      </tr>
-      <tr v-for="item in cart" :key="item.id">
-        <td>
-          <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
-          <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
-        </td>
-        <td>
-          <h4 class="price">{{ item.price }}</h4>
-        </td>
-        <td>
-          <strong>{{ item.quantity }}</strong>
-        </td>
-        <td>{{ item.quantity * item.price }}</td>
-      </tr>
-    </table>
+    <app-cart-steps />
+    <hr />
+    <h1 class="center">Your Cart</h1>
 
-    <section class="payment">
-      <app-card />
-      <div class="total">
-        <h3>Cart Totals</h3>
-        <div class="caption">
-          <p>Subtotal:</p>
-          <p>Shipping:</p>
-          <p>Total</p>
+    <section v-if="cartTotal > 0">
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr v-for="item in cart" :key="item.id">
+          <td>
+            <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
+            <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
+          </td>
+          <td>
+            <h4 class="price">{{ item.price }}</h4>
+          </td>
+          <td>
+            <strong>{{ item.quantity }}</strong>
+          </td>
+          <td>{{ item.quantity * item.price }}</td>
+        </tr>
+      </table>
+
+      <section class="payment">
+        <app-card />
+        <div class="total">
+          <div class="caption">
+            <p>Subtotal:</p>
+            <p>Shipping:</p>
+            <p class="golden">Total</p>
+          </div>
+          <div class="num">
+            <p>{{ cartTotal }}</p>
+            <p>Free Shipping</p>
+            <p class="golden">num</p>
+          </div>
         </div>
-        <div class="num">
-          <p>Subtotal: num</p>
-          <p>Shipping: free shipping</p>
-          <p class="golden">Total: num</p>
-        </div>
-      </div>
+      </section>
+    </section>
+
+    <section v-else class="center">
+      <p>Your cart is empty, fill er up!</p>
+      <button>
+        <nuxt-link exact to="/">Back Home</nuxt-link>
+      </button>
     </section>
 
     <app-sales-boxes />
@@ -46,16 +57,20 @@
 
 <script>
 import AppCard from "~/components/AppCard.vue";
+import AppCartSteps from "~/components/AppCartSteps.vue";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
 import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
     AppSalesBoxes,
+    AppCartSteps,
     AppCard
   },
   computed: {
-    ...mapState(["cart"])
+    ...mapState(["cart"]),
+    ...mapGetters(["cartTotal"])
   }
 };
 </script>
@@ -67,10 +82,11 @@ export default {
   width: 100px;
 }
 
-.payment {
+.payment,
+.total {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 30px;
+  grid-column-gap: 100px;
 }
 
 table {
@@ -89,5 +105,19 @@ th {
 td,
 th {
   border-bottom: 1px solid #ccc;
+}
+
+.golden {
+  background: #f2eee2;
+  font-weight: bold;
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.center {
+  text-align: center;
 }
 </style>

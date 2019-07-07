@@ -3,12 +3,15 @@
     <div v-if="cartUIStatus === 'idle'" class="payment">
       <h3>Please enter your payment details:</h3>
       <label for="email">Email</label>
+      <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
+      <br />
       <label for="card">Credit Card</label>
-      <p>
+      <br />
+      <small>
         Test using this credit card:
         <span class="cc-number">4242 4242 4242 4242</span>, and enter any 5 digits for the zip code
-      </p>
+      </small>
       <card
         class="stripe-card"
         id="card"
@@ -79,10 +82,25 @@ export default {
 </script> 
  
 <style lang="scss" scoped>
+input,
+button {
+  width: 100%;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.payment {
+  margin-top: 20px;
+}
+
 .stripe-card {
-  width: 300px;
+  margin-top: 10px;
+  width: 100%;
   border: 1px solid grey;
 }
+
 .stripe-card.complete {
   border-color: green;
 }

@@ -16,6 +16,7 @@
           <nuxt-link to="/men">Men</nuxt-link>
         </li>
         <li>
+          <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
           <nuxt-link to="/cart">Cart</nuxt-link>
         </li>
       </ul>
@@ -24,7 +25,13 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters(["cartCount"])
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -55,6 +62,7 @@ nav {
       padding: 0 20px;
       border-left: 1px solid #ddd;
       border-right: 1px solid #ddd;
+      position: relative;
       a {
         color: black;
         &:hover {
@@ -63,5 +71,22 @@ nav {
       }
     }
   }
+}
+
+.carttotal {
+  position: absolute;
+  border-radius: 1000px;
+  background: black;
+  color: white;
+  font-size: 10px;
+  padding: 3px;
+  top: -18px;
+  right: -5px;
+  width: 25px;
+  text-align: center;
+  height: 25px;
+  font-size: 10px;
+  padding: 6px 10px;
+  font-weight: bold;
 }
 </style>

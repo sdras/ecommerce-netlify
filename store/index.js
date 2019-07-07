@@ -5,7 +5,6 @@ import data from "~/static/storedata.json"
 export const state = () => ({
   cartUIStatus: "idle",
   totalAmt: 50,
-  cartCount: 0, //should use a getter for this instead
   storedata: data,
   cart: []
 })
@@ -19,6 +18,15 @@ export const getters = {
   },
   men: state => {
     return state.storedata.filter(el => el.gender === "Male")
+  },
+  cartCount: state => {
+    let start = 0
+    if (!state.cart.length) return start
+    for (let i = 0; i <= state.cart.length; i++) {
+      start += state.cart[i].quantity
+    }
+    return start
+    //return state.cart.reduce((ac, next) => ac.quantity + next.quantity, 0)
   }
 }
 
