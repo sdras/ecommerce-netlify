@@ -20,13 +20,8 @@ export const getters = {
     return state.storedata.filter(el => el.gender === "Male")
   },
   cartCount: state => {
-    let start = 0
-    if (!state.cart.length) return start
-    for (let i = 0; i <= state.cart.length; i++) {
-      start += state.cart[i].quantity
-    }
-    return start
-    //return state.cart.reduce((ac, next) => ac.quantity + next.quantity, 0)
+    if (!state.cart.length) return 0
+    return state.cart.reduce((ac, next) => ac + next.quantity, 0)
   }
 }
 
