@@ -22,14 +22,13 @@
           <button class="update-num" @click="quantity++">+</button>
         </p>
         <p>
-          <button class="button purchase">Add to Cart</button>
-        </p>
-        <hr />
-        <p>
           Available in additional colors:
           <strong>
             <span :style="`color: ${product.color}`">{{ product.color }}</span>
           </strong>
+        </p>
+        <p>
+          <button class="button purchase" @click="cartAdd">Add to Cart</button>
         </p>
       </section>
     </section>
@@ -64,7 +63,7 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      quantity: 0,
+      quantity: 1,
       tempcart: [] // this object should be the same as the json store object, with an additional param, quantity
     };
   },
@@ -72,6 +71,14 @@ export default {
     ...mapState(["storedata"]),
     product() {
       return this.storedata.find(el => el.id === this.id);
+    }
+  },
+  methods: {
+    cartAdd() {
+      let item = this.product;
+      item.quantity = this.quantity;
+      this.tempcart.push(item);
+      this.$store.commit("addToCart", item);
     }
   }
 };

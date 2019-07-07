@@ -18,7 +18,7 @@
         @change="complete = $event.complete"
       />
       <button
-        class="pay-with-stripe"
+        class="pay-with-stripe button"
         @click="pay"
         :disabled="!complete || !stripeEmail"
       >Pay with credit card</button>
@@ -78,7 +78,7 @@ export default {
 };
 </script> 
  
-<style>
+<style lang="scss" scoped>
 .stripe-card {
   width: 300px;
   border: 1px solid grey;

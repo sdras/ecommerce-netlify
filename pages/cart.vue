@@ -10,11 +10,15 @@
 <script>
 import AppCard from "~/components/AppCard.vue";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
+import { mapState } from "vuex";
 
 export default {
   components: {
     AppSalesBoxes,
     AppCard
+  },
+  computed: {
+    ...mapState(["cart"])
   }
 };
 </script>

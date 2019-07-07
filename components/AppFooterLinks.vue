@@ -32,4 +32,12 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}
 </style>
