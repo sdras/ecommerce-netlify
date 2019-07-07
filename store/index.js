@@ -5,8 +5,9 @@ import data from "~/static/storedata.json"
 export const state = () => ({
   cartUIStatus: "idle",
   totalAmt: 50,
-  cartCount: 0,
-  storedata: data
+  cartCount: 0, //should use a getter for this instead
+  storedata: data,
+  cart: []
 })
 
 export const getters = {
@@ -26,7 +27,12 @@ export const mutations = {
     state.cartUIStatus = payload
   },
   clearCartCount: state => {
+    //this should just clear the cart
     ;(state.cartCount = 0), (state.totalAmt = 0), (state.cartUIStatus = "idle")
+  },
+  addToCart: (state, payload) => {
+    // this should check first if the item exists and add to the item if so
+    state.cart.push(payload)
   }
 }
 

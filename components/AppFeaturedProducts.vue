@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  margin-top: 60px;
+}
+
 .featureditems {
   width: 100%;
   margin: 20px 0 70px;

@@ -16,8 +16,10 @@
         <h4 class="price">${{ product.price }}</h4>
         <p>{{ product.description }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
-        <p>
+        <p class="quantity">
+          <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
           <input type="number" v-model="quantity" />
+          <button class="update-num" @click="quantity++">+</button>
         </p>
         <p>
           <button class="button purchase">Add to Cart</button>
@@ -29,28 +31,41 @@
             <span :style="`color: ${product.color}`">{{ product.color }}</span>
           </strong>
         </p>
-        <hr />
       </section>
     </section>
-    <app-sales-boxes />
+    <hr />
+    <div class="review">
+      <h2>Reviews</h2>
+      <!-- maybe an image of a person? -->
+      <star-rating
+        :rating="product.starrating"
+        active-color="#000"
+        :star-size="15"
+        :show-rating="false"
+        style="margin: 5px 0"
+      ></star-rating>
+      <p>{{ product.review }}</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto placeat consequatur voluptas sit mollitia ratione autem, atque sequi odio laborum, recusandae quia distinctio voluptatibus sint, quae aliquid possimus exercitationem.</p>
+    </div>
+    <app-featured-products />
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 import StarRating from "vue-star-rating";
-import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
+import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
     StarRating,
-    AppSalesBoxes
+    AppFeaturedProducts
   },
   data() {
     return {
       id: this.$route.params.id,
       quantity: 0,
-      tempcart: []
+      tempcart: [] // this object should be the same as the json store object, with an additional param, quantity
     };
   },
   computed: {
@@ -69,5 +84,24 @@ export default {
   display: grid;
   justify-content: space-around;
   grid-template-columns: 1fr 2fr;
+}
+
+input {
+  width: 60px;
+  font-size: 25px;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.update-num {
+  background: black;
+  border-color: black;
+  color: white;
+  font-size: 20px;
+  width: 45px;
+}
+
+.quantity {
+  display: flex;
 }
 </style>
