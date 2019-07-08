@@ -18,12 +18,12 @@
             <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
           </td>
           <td>
-            <h4 class="price">${{ item.price }}</h4>
+            <h4 class="price">{{ item.price | dollar }}</h4>
           </td>
           <td>
-            <strong>{{ item.quantity }}</strong>
+            <strong>{{ item.quantity | dollar }}</strong>
           </td>
-          <td>${{ item.quantity * item.price }}</td>
+          <td>{{ item.quantity * item.price | dollar }}</td>
         </tr>
       </table>
 
@@ -39,10 +39,10 @@
           </div>
           <div class="num">
             <p>
-              <strong>${{ cartTotal }}</strong>
+              <strong>{{ cartTotal | dollar }}</strong>
             </p>
             <p>Free Shipping</p>
-            <p class="golden">${{ cartTotal }}</p>
+            <p class="golden">{{ cartTotal | dollar }}</p>
           </div>
         </div>
       </section>
@@ -123,5 +123,18 @@ h1 {
 
 .center {
   text-align: center;
+}
+
+.num {
+  text-align: right;
+}
+
+button a {
+  color: black;
+  transition: 0.3s all ease;
+}
+
+button:hover a {
+  color: white;
 }
 </style>
