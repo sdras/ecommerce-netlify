@@ -50,7 +50,7 @@
       </section>
 
       <section v-else class="center">
-        <p>Your cart is empty, fill er up!</p>
+        <p>Your cart is empty, fill it up!</p>
         <button class="pay-with-stripe">
           <nuxt-link exact to="/">Back Home</nuxt-link>
         </button>
@@ -58,12 +58,17 @@
     </section>
     <!--end cart state-->
 
-    <section v-else-if="cartUIStatus === 'loading'">
-      <p>Loading...</p>
+    <section class="loader" v-else-if="cartUIStatus === 'loading'">
+      <app-loader />
     </section>
 
     <section v-else-if="cartUIStatus === 'success'">
-      <p>Success!</p>
+      <h3>Success!</h3>
+      <p>Thank you for your purchase. You'll be receiving your items in 4 business days.</p>
+      <p>Forgot something?</p>
+      <button class="pay-with-stripe">
+        <nuxt-link exact to="/">Back to Home</nuxt-link>
+      </button>
     </section>
 
     <section v-else-if="cartUIStatus === 'failure'">
@@ -76,6 +81,7 @@
 
 <script>
 import AppCard from "~/components/AppCard.vue";
+import AppLoader from "~/components/AppLoader.vue";
 import AppCartSteps from "~/components/AppCartSteps.vue";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
 import { mapState } from "vuex";
@@ -85,6 +91,7 @@ export default {
   components: {
     AppSalesBoxes,
     AppCartSteps,
+    AppLoader,
     AppCard
   },
   computed: {
@@ -147,5 +154,11 @@ h1 {
 button a {
   color: white;
   transition: 0.3s all ease;
+}
+
+//other styles
+.loader {
+  display: flex;
+  justify-content: center;
 }
 </style>
