@@ -4,55 +4,66 @@
     <hr />
     <h1 class="center">Your Cart</h1>
 
-    <section v-if="cartCount > 0">
-      <table>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-        </tr>
-        <tr v-for="item in cart" :key="item.id">
-          <td>
-            <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
-            <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
-          </td>
-          <td>
-            <h4 class="price">{{ item.price | dollar }}</h4>
-          </td>
-          <td>
-            <strong>{{ item.quantity }}</strong>
-          </td>
-          <td>{{ item.quantity * item.price | dollar }}</td>
-        </tr>
-      </table>
+    <section v-if="cartUIStatus === 'idle'">
+      <section v-if="cartCount > 0">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+          <tr v-for="item in cart" :key="item.id">
+            <td>
+              <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
+              <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
+            </td>
+            <td>
+              <h4 class="price">{{ item.price | dollar }}</h4>
+            </td>
+            <td>
+              <strong>{{ item.quantity }}</strong>
+            </td>
+            <td>{{ item.quantity * item.price | dollar }}</td>
+          </tr>
+        </table>
 
-      <section class="payment">
-        <app-card />
-        <div class="total">
-          <div class="caption">
-            <p>
-              <strong>Subtotal:</strong>
-            </p>
-            <p>Shipping:</p>
-            <p class="golden">Total:</p>
+        <section class="payment">
+          <app-card />
+          <div class="total">
+            <div class="caption">
+              <p>
+                <strong>Subtotal:</strong>
+              </p>
+              <p>Shipping:</p>
+              <p class="golden">Total:</p>
+            </div>
+            <div class="num">
+              <p>
+                <strong>{{ cartTotal | dollar }}</strong>
+              </p>
+              <p>Free Shipping</p>
+              <p class="golden">{{ cartTotal | dollar }}</p>
+            </div>
           </div>
-          <div class="num">
-            <p>
-              <strong>{{ cartTotal | dollar }}</strong>
-            </p>
-            <p>Free Shipping</p>
-            <p class="golden">{{ cartTotal | dollar }}</p>
-          </div>
-        </div>
+        </section>
+      </section>
+
+      <section v-else class="center">
+        <p>Your cart is empty, fill er up!</p>
+        <button class="pay-with-stripe">
+          <nuxt-link exact to="/">Back Home</nuxt-link>
+        </button>
       </section>
     </section>
+    <!--end cart state-->
 
-    <section v-else class="center">
-      <p>Your cart is empty, fill er up!</p>
-      <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back Home</nuxt-link>
-      </button>
+    <section v-else-if="cartUIStatus === 'loading'">
+      <p>Loading...</p>
+    </section>
+
+    <section v-else-if="cartUIStatus === 'success'">
+      <p>Success!</p>
     </section>
 
     <app-sales-boxes />
@@ -73,7 +84,7 @@ export default {
     AppCard
   },
   computed: {
-    ...mapState(["cart"]),
+    ...mapState(["cart", "cartUIStatus"]),
     ...mapGetters(["cartCount", "cartTotal"])
   }
 };
