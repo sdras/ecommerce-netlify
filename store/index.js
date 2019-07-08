@@ -9,9 +9,7 @@ export const state = () => ({
 })
 
 export const getters = {
-  featuredProducts: state => {
-    return state.storedata.slice(0, 3)
-  },
+  featuredProducts: state => state.storedata.slice(0, 3),
   women: state => {
     return state.storedata.filter(el => el.gender === "Female")
   },
@@ -65,15 +63,11 @@ export const actions = {
         .then(res => {
           if (res.status === 200) {
             commit("updateCartUI", "success")
-            setTimeout(() => {
-              commit("clearCart")
-            }, 3000)
+            setTimeout(() => commit("clearCart"), 3000)
           } else {
             commit("updateCartUI", "failure")
             // allow them to try again
-            setTimeout(() => {
-              commit("updateCartUI", "idle")
-            }, 3000)
+            setTimeout(() => commit("updateCartUI", "idle"), 3000)
           }
 
           console.log(JSON.stringify(res, null, 2))
