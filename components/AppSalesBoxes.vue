@@ -21,7 +21,7 @@ export default {
         {
           icon: "/icon-cal.svg",
           heading: "24/7 Customer Service",
-          details: "Call us any day, any time"
+          details: "Call us any time"
         },
         {
           icon: "/icon-service.svg",

@@ -4,7 +4,6 @@ import data from "~/static/storedata.json"
 
 export const state = () => ({
   cartUIStatus: "idle",
-  totalAmt: 50,
   storedata: data,
   cart: []
 })
@@ -53,7 +52,7 @@ export const actions = {
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
             stripeEmail: payload.stripeEmail,
-            stripeAmt: getters.cartTotal,
+            stripeAmt: parseFloat(getters.cartTotal * 100).toFixed(2), //it expects the price in cents, as an integer
             stripeToken: "tok_visa", //testing token, later we would use payload.data.token
             stripeIdempotency: uuidv1() //we use this library to create a unique id
           },

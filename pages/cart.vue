@@ -21,7 +21,7 @@
             <h4 class="price">{{ item.price | dollar }}</h4>
           </td>
           <td>
-            <strong>{{ item.quantity | dollar }}</strong>
+            <strong>{{ item.quantity }}</strong>
           </td>
           <td>{{ item.quantity * item.price | dollar }}</td>
         </tr>
