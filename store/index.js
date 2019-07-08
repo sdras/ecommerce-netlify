@@ -22,6 +22,10 @@ export const getters = {
   cartCount: state => {
     if (!state.cart.length) return 0
     return state.cart.reduce((ac, next) => ac + next.quantity, 0)
+  },
+  cartTotal: state => {
+    if (!state.cart.length) return 0
+    return state.cart.reduce((ac, next) => ac + next.quantity * next.price, 0)
   }
 }
 
@@ -31,7 +35,7 @@ export const mutations = {
   },
   clearCartCount: state => {
     //this should just clear the cart
-    ;(state.cart = []), (state.totalAmt = 0), (state.cartUIStatus = "idle")
+    ;(state.cart = []), (state.cartUIStatus = "idle")
   },
   addToCart: (state, payload) => {
     // this should check first if the item exists and add to the item if so
@@ -40,7 +44,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async postStripeFunction({ state, commit }, payload) {
+  async postStripeFunction({ getters, commit }, payload) {
     commit("updateCartUI", "loading")
 
     try {
@@ -49,7 +53,7 @@ export const actions = {
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
             stripeEmail: payload.stripeEmail,
-            stripeAmt: state.totalAmt,
+            stripeAmt: getters.cartTotal,
             stripeToken: "tok_visa", //testing token, later we would use payload.data.token
             stripeIdempotency: uuidv1() //we use this library to create a unique id
           },

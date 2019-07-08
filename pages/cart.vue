@@ -4,7 +4,7 @@
     <hr />
     <h1 class="center">Your Cart</h1>
 
-    <section v-if="cartTotal > 0">
+    <section v-if="cartCount > 0">
       <table>
         <tr>
           <th>Product</th>
@@ -33,12 +33,12 @@
           <div class="caption">
             <p>Subtotal:</p>
             <p>Shipping:</p>
-            <p class="golden">Total</p>
+            <p class="golden">Total:</p>
           </div>
           <div class="num">
             <p>{{ cartTotal }}</p>
             <p>Free Shipping</p>
-            <p class="golden">num</p>
+            <p class="golden">{{ cartTotal }}</p>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default {
   },
   computed: {
     ...mapState(["cart"]),
-    ...mapGetters(["cartTotal"])
+    ...mapGetters(["cartCount", "cartTotal"])
   }
 };
 </script>

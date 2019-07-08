@@ -9,7 +9,7 @@
       <h4>Check out</h4>
     </div>
     <div class="order">
-      <h2 :class="{ active: cartUIStatus === 'success' }>03</h2>
+      <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
       <h4>Order Complete</h4>
     </div>
   </section>
