@@ -50,7 +50,7 @@
 
     <section v-else class="center">
       <p>Your cart is empty, fill er up!</p>
-      <button>
+      <button class="pay-with-stripe">
         <nuxt-link exact to="/">Back Home</nuxt-link>
       </button>
     </section>
@@ -130,11 +130,7 @@ h1 {
 }
 
 button a {
-  color: black;
-  transition: 0.3s all ease;
-}
-
-button:hover a {
   color: white;
+  transition: 0.3s all ease;
 }
 </style>

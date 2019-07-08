@@ -98,7 +98,8 @@ button {
 .stripe-card {
   margin-top: 10px;
   width: 100%;
-  border: 1px solid grey;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
 }
 
 .stripe-card.complete {
