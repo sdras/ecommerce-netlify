@@ -65,13 +65,15 @@ export const actions = {
         .then(res => {
           if (res.status === 200) {
             commit("updateCartUI", "success")
-            commit("clearCart")
+            setTimeout(() => {
+              commit("clearCart")
+            }, 3000)
           } else {
             commit("updateCartUI", "failure")
             // allow them to try again
             setTimeout(() => {
               commit("updateCartUI", "idle")
-            }, 2000)
+            }, 3000)
           }
 
           console.log(JSON.stringify(res, null, 2))

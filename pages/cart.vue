@@ -58,7 +58,7 @@
     </section>
     <!--end cart state-->
 
-    <section class="loader" v-else-if="cartUIStatus === 'loading'">
+    <section v-else-if="cartUIStatus === 'loading'" class="loader">
       <app-loader />
     </section>
 
