@@ -32,7 +32,7 @@ export const mutations = {
   updateCartUI: (state, payload) => {
     state.cartUIStatus = payload
   },
-  clearCartCount: state => {
+  clearCart: state => {
     //this should just clear the cart
     ;(state.cart = []), (state.cartUIStatus = "idle")
   },
@@ -65,7 +65,7 @@ export const actions = {
         .then(res => {
           if (res.status === 200) {
             commit("updateCartUI", "success")
-            commit("clearCartCount")
+            commit("clearCart")
           } else {
             commit("updateCartUI", "failure")
           }
