@@ -31,7 +31,7 @@ export const mutations = {
   },
   clearCartCount: state => {
     //this should just clear the cart
-    ;(state.cartCount = 0), (state.totalAmt = 0), (state.cartUIStatus = "idle")
+    ;(state.cart = []), (state.totalAmt = 0), (state.cartUIStatus = "idle")
   },
   addToCart: (state, payload) => {
     // this should check first if the item exists and add to the item if so
