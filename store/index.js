@@ -68,6 +68,10 @@ export const actions = {
             commit("clearCart")
           } else {
             commit("updateCartUI", "failure")
+            // allow them to try again
+            setTimeout(() => {
+              commit("updateCartUI", "idle")
+            }, 2000)
           }
 
           console.log(JSON.stringify(res, null, 2))
