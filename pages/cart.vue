@@ -66,6 +66,10 @@
       <p>Success!</p>
     </section>
 
+    <section v-else-if="cartUIStatus === 'failure'">
+      <p>Oops, something went wrong. Redirecting you to your cart to try again.</p>
+    </section>
+
     <app-sales-boxes />
   </div>
 </template>

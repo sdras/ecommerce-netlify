@@ -52,7 +52,7 @@ export const actions = {
           "https://ecommerce-netlify.netlify.com/.netlify/functions/index",
           {
             stripeEmail: payload.stripeEmail,
-            stripeAmt: parseFloat(getters.cartTotal * 100).toFixed(2), //it expects the price in cents, as an integer
+            stripeAmt: Math.floor(getters.cartTotal * 100), //it expects the price in cents, as an integer
             stripeToken: "tok_visa", //testing token, later we would use payload.data.token
             stripeIdempotency: uuidv1() //we use this library to create a unique id
           },
