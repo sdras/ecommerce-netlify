@@ -18,12 +18,12 @@
             <h3 style="padding-top: 36px; text-align: left">{{ item.name }}</h3>
           </td>
           <td>
-            <h4 class="price">{{ item.price }}</h4>
+            <h4 class="price">${{ item.price }}</h4>
           </td>
           <td>
             <strong>{{ item.quantity }}</strong>
           </td>
-          <td>{{ item.quantity * item.price }}</td>
+          <td>${{ item.quantity * item.price }}</td>
         </tr>
       </table>
 
@@ -31,14 +31,18 @@
         <app-card />
         <div class="total">
           <div class="caption">
-            <p>Subtotal:</p>
+            <p>
+              <strong>Subtotal:</strong>
+            </p>
             <p>Shipping:</p>
             <p class="golden">Total:</p>
           </div>
           <div class="num">
-            <p>{{ cartTotal }}</p>
+            <p>
+              <strong>${{ cartTotal }}</strong>
+            </p>
             <p>Free Shipping</p>
-            <p class="golden">{{ cartTotal }}</p>
+            <p class="golden">${{ cartTotal }}</p>
           </div>
         </div>
       </section>
