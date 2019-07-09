@@ -76,7 +76,6 @@ export default {
   width: 100px;
 }
 
-.payment,
 .total {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,5 +122,24 @@ h1 {
 button a {
   color: white;
   transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 700px) {
+  .payment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+  }
+
+  .total {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .payment {
+    width: 94%;
+    margin-left: 2%;
+  }
 }
 </style>

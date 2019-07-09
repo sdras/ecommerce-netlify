@@ -62,4 +62,10 @@ h4 {
   margin-top: 20px;
   color: #555;
 }
+
+@media screen and (max-width: 600px) {
+  section {
+    grid-column-gap: 30px !important;
+  }
+}
 </style>
