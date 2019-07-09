@@ -62,8 +62,8 @@
       <app-loader />
     </section>
 
-    <section v-else-if="cartUIStatus === 'success'">
-      <h3>Success!</h3>
+    <section v-else-if="cartUIStatus === 'success'" class="success">
+      <h2>Success!</h2>
       <p>Thank you for your purchase. You'll be receiving your items in 4 business days.</p>
       <p>Forgot something?</p>
       <button class="pay-with-stripe">
@@ -160,5 +160,9 @@ button a {
 .loader {
   display: flex;
   justify-content: center;
+}
+
+.success {
+  text-align: center;
 }
 </style>
