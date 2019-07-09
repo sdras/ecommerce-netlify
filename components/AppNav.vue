@@ -40,7 +40,7 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 40px 40px 0;
 }
 
 nav {
