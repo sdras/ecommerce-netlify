@@ -168,6 +168,16 @@ aside {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .storegrid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+  }
+}
+
 /* --- items animation --- */
 
 .items-leave-active {
