@@ -6,7 +6,16 @@
     </section>
     <app-footer-links />
     <div class="sarahstuff">
-      <p>This project is on github, hosted with Netlify, and made with love by Sarah Drasner, @sarah_edo (twitter) @sdras (github)</p>
+      <p>
+        This project is
+        <a href="https://github.com/sdras/ecommerce-netlify">open source on github</a>,
+        hosted with
+        <a href="https://bit.ly/2G29YwK">Netlify</a>, and made with love by Sarah Drasner,
+        <a
+          href="https://twitter.com/sarah_edo"
+        >@sarah_edo (twitter)</a> &
+        <a href="https://github.com/sdras">@sdras (github)</a>
+      </p>
     </div>
   </footer>
 </template>
@@ -40,5 +49,12 @@ export default {
   padding: 10px 30px;
   color: white;
   text-align: center;
+}
+
+a,
+a:visited,
+a:active {
+  color: #c4c3ec;
+  font-weight: bold;
 }
 </style>
