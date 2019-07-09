@@ -15,7 +15,7 @@ export default {
       boxes: [
         {
           icon: "/icon-package.svg",
-          heading: "Free Shipping Worldwide",
+          heading: "Free Shipping Globally",
           details: "Delivery in 4 Days"
         },
         {
@@ -25,7 +25,7 @@ export default {
         },
         {
           icon: "/icon-service.svg",
-          heading: "Easy Online Return Policy",
+          heading: "Easy Online Returns",
           details: "Send Within 30 Days"
         }
       ]
@@ -37,14 +37,8 @@ export default {
 <style lang="scss" scoped>
 .boxes {
   margin: 70px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 0px;
   div {
     border: 1px solid #ddd;
-    padding: 40px 50px;
     min-height: 150px;
     justify-self: center;
     align-self: center;
@@ -65,5 +59,29 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin: 0 0 10px 0;
+}
+
+@media screen and (min-width: 700px) {
+  .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    div {
+      padding: 40px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .boxes {
+    width: 83vw;
+    margin-left: 5vw;
+    div {
+      padding: 10px 20px;
+      margin-bottom: 10px;
+    }
+  }
 }
 </style>
