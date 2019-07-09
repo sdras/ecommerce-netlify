@@ -36,7 +36,6 @@ import AppCartSteps from "~/components/AppCartSteps.vue";
 import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
 import AppCartDisplay from "~/components/AppCartDisplay.vue";
 import { mapState } from "vuex";
-import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -46,8 +45,7 @@ export default {
     AppLoader
   },
   computed: {
-    ...mapState(["cart", "cartUIStatus"]),
-    ...mapGetters(["cartCount", "cartTotal"])
+    ...mapState(["cartUIStatus"])
   }
 };
 </script>

@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     ...mapState(["cart"]),
-    ...mapGetters(["cartCount"])
+    ...mapGetters(["cartCount", "cartTotal"])
   }
 };
 </script>
@@ -114,10 +114,6 @@ th {
 
 h1 {
   margin-top: 40px;
-}
-
-.center {
-  text-align: center;
 }
 
 .num {
