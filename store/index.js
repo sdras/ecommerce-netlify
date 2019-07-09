@@ -31,8 +31,14 @@ export const mutations = {
     ;(state.cart = []), (state.cartUIStatus = "idle")
   },
   addToCart: (state, payload) => {
-    // this should check first if the item exists and add to the item if so
-    state.cart.push(payload)
+    let itemfound = false
+    state.cart.forEach((el, i, arr) => {
+      if (el.id === payload.id) {
+        el.quantity += payload.quantity
+        itemfound = true
+      }
+    })
+    if (!itemfound) state.cart.push(payload)
   }
 }
 
