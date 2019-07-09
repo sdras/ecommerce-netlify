@@ -63,4 +63,11 @@ export default {};
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .textlockup {
+    grid-template-columns: 25px 25px 1fr !important;
+    grid-template-rows: 6vmin 5.5vmin 10vmin 20px 1fr !important;
+  }
+}
 </style>

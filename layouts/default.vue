@@ -49,7 +49,7 @@ main {
   margin-left: 2vw;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 1000px) {
   main {
     padding: 40px;
     width: 80vw;
