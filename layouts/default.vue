@@ -44,8 +44,16 @@ body {
 }
 
 main {
-  padding: 40px;
-  width: 80vw;
-  margin-left: 7vw;
+  padding: 0;
+  width: 95vw;
+  margin-left: 2vw;
+}
+
+@media screen and (min-width: 850px) {
+  main {
+    padding: 40px;
+    width: 80vw;
+    margin-left: 7vw;
+  }
 }
 </style>

@@ -89,4 +89,15 @@ nav {
   padding: 6px 10px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 850px) {
+  h1 {
+    margin: 0;
+  }
+  nav ul li {
+    padding: 0 5px !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
 </style>
