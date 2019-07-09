@@ -111,4 +111,20 @@ input {
 .quantity {
   display: flex;
 }
+
+@media screen and (max-width: 650px) {
+  .img img {
+    width: 100%;
+  }
+
+  .item-contain {
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+
+  .review {
+    width: 90%;
+    margin-left: 4%;
+  }
+}
 </style>
