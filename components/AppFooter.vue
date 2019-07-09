@@ -41,6 +41,10 @@ export default {
   align-items: center;
   flex-direction: column;
   color: white;
+  h2 {
+    padding: 0 30px;
+    text-align: center;
+  }
 }
 
 .sarahstuff {
