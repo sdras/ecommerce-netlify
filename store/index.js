@@ -27,12 +27,12 @@ export const mutations = {
     state.cartUIStatus = payload
   },
   clearCart: state => {
-    //this should just clear the cart
+    //this clears the cart
     ;(state.cart = []), (state.cartUIStatus = "idle")
   },
   addToCart: (state, payload) => {
     let itemfound = false
-    state.cart.forEach((el, i, arr) => {
+    state.cart.forEach(el => {
       if (el.id === payload.id) {
         el.quantity += payload.quantity
         itemfound = true
