@@ -57,6 +57,7 @@ export default {};
     text-transform: uppercase;
   }
   .img {
+    max-width: 950px;
     grid-area: 1 / 3 / 6 / 4;
     img {
       width: 95%;
