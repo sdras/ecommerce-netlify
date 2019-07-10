@@ -36,7 +36,7 @@ section {
   grid-row-gap: 0px;
   text-align: center;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto 0;
   div {
     display: flex;
     flex-direction: column;

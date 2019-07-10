@@ -7,7 +7,6 @@
     <section v-if="cartUIStatus === 'idle'">
       <app-cart-display />
     </section>
-    <!--end cart state-->
 
     <section v-else-if="cartUIStatus === 'loading'" class="loader">
       <app-loader />
