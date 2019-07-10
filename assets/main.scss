@@ -267,14 +267,14 @@ input[type="range"].slider::-ms-track {
 }
 
 input[type="range"].slider::-ms-fill-lower {
-  background: #2752e7;
+  background: $brandprimary;
   border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 27.4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 
 input[type="range"].slider::-ms-fill-upper {
-  background: #3e64ea;
+  background: $brandprimary;
   border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 27.4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
@@ -282,7 +282,7 @@ input[type="range"].slider::-ms-fill-upper {
 
 input[type="range"].slider::-ms-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
-  border: 1.9px solid #3e63ea;
+  border: 1.9px solid $brandprimary;
   height: 17px;
   width: 17px;
   border-radius: 31px;
@@ -292,9 +292,9 @@ input[type="range"].slider::-ms-thumb {
 }
 
 input[type="range"].slider:focus::-ms-fill-lower {
-  background: #3e64ea;
+  background: $brandprimary;
 }
 
 input[type="range"].slider:focus::-ms-fill-upper {
-  background: #5576ed;
+  background: $brandprimary;
 }
