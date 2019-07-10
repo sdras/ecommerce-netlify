@@ -1,7 +1,7 @@
 <template>
   <div class="storegrid">
-    <section class="content">
-      <div v-for="item in data" :key="item.id" class="item">
+    <transition-group name="items" tag="section" class="content">
+      <div v-for="item in filteredprice" :key="item.id" class="item">
         <div class="img-contain">
           <NuxtLink :to="`product/${item.id}`">
             <img :src="`/products/${item.img}`" />
@@ -20,9 +20,22 @@
           <button class="multi-item">View Item ></button>
         </NuxtLink>
       </div>
-    </section>
+    </transition-group>
     <aside>
+      <h3>Special Sale</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero iusto nemo laboriosam perferendis voluptas ullam officiis, quibusdam quas quam eveniet est fugit delectus corporis incidunt nam esse suscipit itaque?</p>
+      <h3>Filter by Price: Max Price {{ pricerange }}</h3>
+      <input
+        class="slider"
+        id="pricerange"
+        type="range"
+        v-model="pricerange"
+        :min="min"
+        :max="max"
+        step="0.1"
+      />
+      <span class="min">${{ min }}</span>
+      <span class="max">${{ max }}</span>
     </aside>
   </div>
 </template>
@@ -34,6 +47,18 @@ export default {
   props: {
     data: {
       required: true
+    }
+  },
+  data() {
+    return {
+      min: 0,
+      max: 200,
+      pricerange: 200
+    };
+  },
+  computed: {
+    filteredprice() {
+      return this.data.filter(el => el.price < this.pricerange);
     }
   },
   components: {
@@ -70,5 +95,10 @@ export default {
 aside {
   height: 100%;
   width: 100%;
+}
+
+.max {
+  display: inline-block;
+  float: right;
 }
 </style>
