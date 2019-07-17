@@ -1,38 +1,46 @@
+import data from '~/static/storedata.json'
+let dynamicRoutes = new Promise(function(res) {
+  res(data.map(el => `product/${el.id}`))
+})
+
 export default {
-  mode: "universal",
+  mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
-    script: [{ src: "https://js.stripe.com/v3/" }],
+    title: process.env.npm_package_name || '',
+    script: [{ src: 'https://js.stripe.com/v3/' }],
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 
       {
-        hid: "description",
-        name: "description",
-        content: process.env.npm_package_description || ""
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     link: [
       {
-        rel: "stylesheet",
+        rel: 'stylesheet',
         href:
-          "https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap"
+          'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap'
       }
     ]
+  },
+  generate: {
+    routes: dynamicRoutes
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: '#fff' },
   /*
    ** Global CSS
    */
-  css: ["normalize.css", { src: "~/assets/main.scss", lang: "sass" }],
+  css: ['normalize.css', { src: '~/assets/main.scss', lang: 'sass' }],
   /*
    ** Plugins to load before mounting the App
    */
