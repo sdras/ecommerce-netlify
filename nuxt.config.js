@@ -1,4 +1,4 @@
-import data from '~/static/storedata.json'
+import data from 'static/storedata.json'
 let dynamicRoutes = new Promise(function(res) {
   res(data.map(el => `product/${el.id}`))
 })
