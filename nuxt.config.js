@@ -1,7 +1,9 @@
 import data from './static/storedata.json'
-let dynamicRoutes = new Promise(function(res) {
-  res(data.map(el => `product/${el.id}`))
-})
+let dynamicRoutes = () => {
+  return new Promise(resolve => {
+    resolve(data.map(el => `product/${el.id}`))
+  })
+}
 
 export default {
   mode: 'universal',
