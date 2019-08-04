@@ -8,7 +8,7 @@
         <img :src="`/products/${product.img}`" />
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price | dollar }}</h4>
-        <NuxtLink :to="`product/${product.id}`">
+        <NuxtLink :to="`/product/${product.id}`">
           <button class="multi-item">View Item ></button>
         </NuxtLink>
       </div>
