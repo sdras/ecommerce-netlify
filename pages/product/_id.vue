@@ -78,7 +78,7 @@ export default {
       let item = this.product;
       item.quantity = this.quantity;
       this.tempcart.push(item);
-      this.$store.commit("addToCart", item);
+      this.$store.commit("addToCart", {...item});
     }
   }
 };
