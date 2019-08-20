@@ -2,7 +2,9 @@
 
 > A serverless function to process stripe payments with Nuxt, Netlify, and Lambda
 
-![](https://css-tricks.com/wp-content/uploads/2019/07/ecommerce-faster.mp4)
+Demo site is here: [https://ecommerce-netlify.netlify.com/](E-Commerce Store)
+
+![screenshot of site](https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/ecommerce-screenshot.jpg "E-Commerce Netlify Site")
 
 There are two articles explaining how this site is set up:
 * Explanation of Netlify Functions and Stripe: [Let's Build a JAMstack E-Commerce Store with Netlify Functions](https://css-tricks.com/lets-build-a-jamstack-e-commerce-store-with-netlify-functions/)
