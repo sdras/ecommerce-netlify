@@ -2,6 +2,8 @@
 
 > A serverless function to process stripe payments with Nuxt, Netlify, and Lambda
 
+![](https://css-tricks.com/wp-content/uploads/2019/07/ecommerce-faster.mp4)
+
 There are two articles explaining how this site is set up:
 * Explanation of Netlify Functions and Stripe: [Let's Build a JAMstack E-Commerce Store with Netlify Functions](https://css-tricks.com/lets-build-a-jamstack-e-commerce-store-with-netlify-functions/)
 * Explanation of dynamic routing in Nuxt for the individual product pages: [Creating Dynamic Routes in Nuxt Application](https://css-tricks.com/creating-dynamic-routes-in-a-nuxt-application/)
