@@ -31,14 +31,9 @@ export const mutations = {
     ;(state.cart = []), (state.cartUIStatus = "idle")
   },
   addToCart: (state, payload) => {
-    let itemfound = false
-    state.cart.forEach(el => {
-      if (el.id === payload.id) {
-        el.quantity += payload.quantity
-        itemfound = true
-      }
-    })
-    if (!itemfound) state.cart.push(payload)
+    let itemfound = state.cart.find(el => el.id === payload.id)
+    if (!itemfound) return void state.cart.push(payload)
+    itemfound.quantity += payload.quantity
   }
 }
 
