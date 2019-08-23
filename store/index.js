@@ -32,8 +32,9 @@ export const mutations = {
   },
   addToCart: (state, payload) => {
     let itemfound = state.cart.find(el => el.id === payload.id)
-    if (!itemfound) return void state.cart.push(payload)
-    itemfound.quantity += payload.quantity
+    itemfound
+      ? (itemfound.quantity += payload.quantity)
+      : state.cart.push(payload)
   }
 }
 
