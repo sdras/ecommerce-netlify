@@ -14,17 +14,17 @@ There are two articles explaining how this site is set up:
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn install or npm install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ yarn dev or npm dev
 
 # build for production and launch server
-$ yarn build
-$ yarn start
+$ yarn build or npm build
+$ yarn start or npm start
 
 # generate static project
-$ yarn generate
+$ yarn generate or npm generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
