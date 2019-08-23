@@ -1,2 +1,8 @@
 [build]
   functions = "functions"
+
+[dev]
+  command = "yarn dev"
+  port = 3000
+
+# If you're experiencing stripe issues check the readme.md
