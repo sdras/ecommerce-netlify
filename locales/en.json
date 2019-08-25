@@ -1,0 +1,119 @@
+{
+	"App": {
+		"back-to-home": "Back Home",
+		"total": "Total"
+	},
+	"AppLang": {
+		"switch": "Switch to {lang}"
+	},
+	"AppNav": {
+		"home": "Home",
+		"all": "All",
+		"women": "Women",
+		"men": "Men",
+		"cart": "Cart"
+	},
+	"AppTextlockup": {
+		"new": "New",
+		"sale": "Men Shoes",
+		"collection": "Collection",
+		"details": "Street Style New Fashion"
+	},
+	"AppSalesBoxes": {
+		"shipping": {
+			"heading": "Free Shipping Globally",
+			"details": "Delivery in 4 Days"
+		},
+		"customerService": {
+			"heading": "24/7 Customer Service",
+			"details": "Call us any time"
+		},
+		"returns": {
+			"heading": "Easy Online Returns",
+			"details": "Send Within 30 Days"
+		}
+	},
+	"AppFeaturedProducts": {
+		"title": "Featured Products",
+		"viewItem": "View Item"
+	},
+	"AppFooter": {
+		"sarahstuff": "<p> This project is <a href=\"https://github.com/sdras/ecommerce-netlify\">open source on github</a>, hosted with <a href=\"https://bit.ly/2G29YwK\">Netlify</a>, and made with love by Sarah Drasner, <a href=\"https://twitter.com/sarah_edo\">@sarah_edo (twitter)</a> & <a href=\"https://github.com/sdras\">@sdras (github)</a></p>"
+	},
+	"AppFooterLinks": {
+		"about": "Aout",
+		"company": "Company",
+		"locations": "Locations",
+		"contact": "Contact",
+		"hours": "Hours"
+	},
+	"AppStoreGrid": {
+		"viewItem": "View Item",
+		"filterByPrice": "Filter by Price",
+		"specialSale": "Special Sale",
+		"maxPrice": "Max Price"
+	},
+	"AppCard": {
+		"payment": {
+			"title": "Please enter your payment details:",
+			"email": {
+				"label": "Email",
+				"placeholder": "name@exemple.com"
+			},
+			"creditcard": {
+				"label": "Credit Card",
+				"description": "Test using this credit card: <span class=\"cc-number\">4242 4242 4242 4242</span>, and enter any 5 digits for the zip code"
+			},
+			"pay-with-stripe": "Pay with credit card"
+		},
+		"status": {
+			"failure": {
+				"title": "Oh No!",
+				"description": "Something went wrong!",
+				"button": "Please try again"
+			},
+			"loading": {
+				"title": "Please hold, we're filling up your cart with goodies",
+				"description": "Loading..."
+			},
+			"success": "Success!"
+		}
+	},
+	"AppCartDisplay": {
+		"product": "Product",
+		"price": "Price",
+		"quantity": "Quantity",
+		"subtotal": "Subtotal",
+		"shipping": "Shipping",
+		"freeShipping": "Free Shipping",
+		"cartEmpty": "Your cart is empty, fill it up!"
+	},
+	"AppCartSteps": {
+		"shopping": "Shopping Cart",
+		"checkout": "Check out",
+		"order": "Order Complete"
+	},
+	"Pages": {
+		"Index": {
+			"new": "50%",
+			"sale": "Storewide Sale",
+			"collection": "Summer",
+			"details": "All accessories"
+		},
+		"Cart": {
+			"title": "Your Cart",
+			"success": {
+				"title": "Success!",
+				"description": "Thank you for your purchase. You'll be receiving your items in 4 business days.",
+				"forgot-something": "Forgot something?",
+				"back": "Back to Home"
+			},
+			"failure": "Oops, something went wrong. Redirecting you to your cart to try again."
+		},
+		"Product": {
+			"availabilityColor": "Available in additional colors",
+			"addToCart": "Add to Cart",
+			"reviews": "Reviews"
+		}
+	}
+}

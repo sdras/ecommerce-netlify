@@ -1,0 +1,120 @@
+{
+	"App": {
+		"backHome": "Retour à l'accueil",
+		"total": "Total"
+	},
+	"AppLang": {
+		"switch": "Vers {lang}"
+	},
+	"AppNav": {
+		"home": "Accueil",
+		"all": "Tous les produits",
+		"women": "Femme",
+		"men": "Homme",
+		"cart": "Panier"
+	},
+	"AppTextlockup": {
+		"new": "Nouveauté",
+		"sale": "Chaussures pour hommes",
+		"collection": "Collection",
+		"details": "Nouvelle Mode Street Style"
+	},
+	"AppSalesBoxes": {
+		"shipping": {
+			"heading": "Livraison Gratuite Internationale",
+			"details": "Livraison sous 4 jours ouvrables"
+		},
+		"customerService": {
+			"heading": "Service Client 24/7",
+			"details": "Contactez nous à tout moment"
+		},
+		"returns": {
+			"heading": "Retour simple en ligne",
+			"details": "Retours sous 30 jours"
+		}
+	},
+	"AppFeaturedProducts": {
+		"title": "Produits Phares",
+		"viewItem": "Voir le Produit"
+	},
+	"AppFooter": {
+		"sarahstuff": "<p> Ce projet est disponile en <a href=\"https://github.com/sdras/ecommerce-netlify\">open source sur github</a>, hébergé avec <a href=\"https://bit.ly/2G29YwK\">Netlify</a>, et fait avec amour par Sarah Drasner, <a href=\"https://twitter.com/sarah_edo\">@sarah_edo (twitter)</a> & <a href=\"https://github.com/sdras\">@sdras (github)</a></p>"
+	},
+	"AppFooterLinks": {
+		"about": "À Propos",
+		"company": "Compagnie",
+		"locations": "Emplacements",
+		"contact": "Contact",
+		"hours": "Horaires"
+	},
+	"AppStoreGrid": {
+		"viewItem": "Voir le Produit",
+		"filterByPrice": "Filtrer par Prix",
+		"specialSale": "Vente Spéciale",
+		"maxPrice": "Prix max."
+	},
+	"AppCard": {
+		"payment": {
+			"title": "Veuillez entrer vos informations de paiement:",
+			"email": {
+				"label": "Email",
+				"placeholder": "nom@exemple.com"
+			},
+			"card": {
+				"label": "Carte de Crédit",
+				"description": "Testez avec cette carte de crédit: <span class=\"cc-number\">4242 4242 4242 4242</span>, et entrez 5 chiffres pour le code postal"
+			},
+			"pay-with-stripe": "Payer avec une carte de crédit"
+		},
+		"status": {
+			"failure": {
+				"title": "Oh Non!",
+				"description": "Quelque chose s'est mal passé!",
+				"button": "Veuillez réessayer"
+			},
+			"loading": {
+				"title": "Veuillez patienter, nous remplissons votre panier avec des goodies",
+				"description": "Chargement en cours..."
+			},
+			"success": "Paiement accepté!"
+		}
+	},
+	"AppCartDisplay": {
+		"product": "Produit",
+		"price": "Prix",
+		"quantity": "Quantité",
+		"subtotal": "Sous-total",
+		"shipping": "Livraison",
+		"freeShipping": "Livraison offerte",
+		"cartEmpty": "Votre panier est vide, remplissez le!"
+	},
+	"AppCartSteps": {
+		"shopping": "Panier",
+		"checkout": "Paiement",
+		"order": "Commande validée"
+	},
+
+	"Pages": {
+		"Index": {
+			"new": "50%",
+			"sale": "Vente générale",
+			"collection": "Été",
+			"details": "Tous les accessoires"
+		},
+		"Cart": {
+			"title": "Votre Panier",
+			"success": {
+				"title": "Paiement accepté!",
+				"description": "Merci pour votre achat. Vous recevrez vos articles dans 4 jours ouvrables.",
+				"forgot-something": "Vous avez oulié quelque chose ?",
+				"back": "Retour à l'acceuil"
+			},
+			"failure": "Oups, quelque chose s'est mal passé. Redirection vers votre panier pour réessayer."
+		},
+		"Product": {
+			"availabilityColor": "Disponible dans d'autres coloris",
+			"addToCart": "Ajouter au Panier",
+			"reviews": "Avis"
+		}
+	}
+}
