@@ -1,22 +1,4 @@
-<template>
-  <div>
-    <app-store-grid :data="storedata" />
-  </div>
-</template>
-
 <script>
-import { mapState } from "vuex";
-import AppStoreGrid from "~/components/AppStoreGrid.vue";
-
-export default {
-  components: {
-    AppStoreGrid
-  },
-  computed: {
-    ...mapState(["storedata"])
-  }
-};
+import All from '~/pages/_lang/all';
+export default All;
 </script>
-
-<style lang="scss" scoped>
-</style>

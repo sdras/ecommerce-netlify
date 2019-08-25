@@ -1,22 +1,4 @@
-<template>
-  <div>
-    <app-store-grid :data="men" />
-  </div>
-</template>
-
 <script>
-import { mapGetters } from "vuex";
-import AppStoreGrid from "~/components/AppStoreGrid.vue";
-
-export default {
-  components: {
-    AppStoreGrid
-  },
-  computed: {
-    ...mapGetters(["men"])
-  }
-};
+import Men from '~/pages/_lang/men';
+export default Men;
 </script>
-
-<style lang="scss" scoped>
-</style>
