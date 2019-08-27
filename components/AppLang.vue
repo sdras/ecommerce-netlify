@@ -5,9 +5,9 @@
 		<div class="appLang__selectLang">
 			<nuxt-link
 				class="appLang__selectLang__lang"
-				v-for="lang in availableLocales"
+				v-for="lang in Object.keys(availableLocales)"
 				:key="lang"
-				v-if="lang !== locale"
+				v-if="lang !== localeId"
 				:to="lang !== 'en' ? `/${lang}${$route.fullPath}` : $route.fullPath.replace(/^\/[^\/]+/, '')"
 			>
 				<img :src="`/flag-${lang}.svg`" alt="service icon" />
@@ -22,7 +22,7 @@ import { mapGetters } from 'vuex';
 export default {
 	name: 'AppLang',
 	computed: {
-		...mapGetters(['locale', 'availableLocales']),
+		...mapGetters(['localeId', 'availableLocales']),
 		activeLocaleFlag() {
 			return `/flag-${this.$i18n.locale}.svg`;
 		},

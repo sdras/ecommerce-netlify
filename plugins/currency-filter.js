@@ -1,7 +1,10 @@
-import Vue from "vue"
+import Vue from 'vue';
 
-Vue.filter("dollar", function(value) {
-  // Using a template literal here, that's why there are two dollar signs.
-  // The first is an actual dollar.
-  return `$${parseFloat(value).toFixed(2)}`
-})
+export default ({ app, store }) => {
+	Vue.filter('currency', function(value) {
+		// Using a template literal here, that's why there are two dollar signs.
+		// The first is an actual dollar.
+		const currency = store.getters.locale.currency;
+		return `${currency}${parseFloat(value).toFixed(2)}`;
+	});
+};
