@@ -38,7 +38,7 @@
 		"viewItem": "Voir le Produit"
 	},
 	"AppFooter": {
-		"sarahstuff": "<p> Ce projet est disponile en <a href=\"https://github.com/sdras/ecommerce-netlify\">open source sur github</a>, hébergé avec <a href=\"https://bit.ly/2G29YwK\">Netlify</a>, et fait avec amour par Sarah Drasner, <a href=\"https://twitter.com/sarah_edo\">@sarah_edo (twitter)</a> & <a href=\"https://github.com/sdras\">@sdras (github)</a></p>"
+		"sarahstuff": "<p> Ce projet est disponible en <a href=\"https://github.com/sdras/ecommerce-netlify\">open source sur github</a>, hébergé avec <a href=\"https://bit.ly/2G29YwK\">Netlify</a>, et fait avec amour par Sarah Drasner, <a href=\"https://twitter.com/sarah_edo\">@sarah_edo (twitter)</a> & <a href=\"https://github.com/sdras\">@sdras (github)</a></p>"
 	},
 	"AppFooterLinks": {
 		"about": "À Propos",
