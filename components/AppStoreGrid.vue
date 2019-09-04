@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import StarRating from "vue-star-rating";
+import StarRating from "vue-star-rating/src/star-rating.vue";
 
 export default {
   props: {
