@@ -10,8 +10,9 @@
         </tr>
         <tr v-for="item in cart" :key="item.id">
           <td>
-            <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
-            <h3 class="productname">{{ item.name }}</h3>
+            <img :src="`/products/${item.img}`" :alt="item.name" class="product-img" />
+            <h3 class="product-name">{{ item.name }}</h3>
+            <h5 v-if="item.size" class="product-size">Size: {{ item.size }}</h5>
           </td>
           <td>
             <h4 class="price">{{ item.price | dollar }}</h4>
@@ -70,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.productimg {
+.product-img {
   float: left;
   margin-right: 15px;
   width: 100px;
@@ -106,13 +107,17 @@ th {
   padding: 10px;
 }
 
-.productname {
-  padding-top: 36px;
+.product-name,
+.product-size {
   text-align: left;
 }
 
-h1 {
-  margin-top: 40px;
+.product-name {
+  padding-top: 36px;
+}
+
+.product-size {
+  font-weight: 100;
 }
 
 .num {
