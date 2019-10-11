@@ -23,12 +23,13 @@
             <button class="update-num" @click="quantity++">+</button>
           </div>
           <div v-if="product.sizes" class="size">
-            <select v-model="size" class="size-picker">
+            <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
               <option :value="null" disabled hidden>Size</option>
               <option v-for="(size, key) in product.sizes" :key="key" :value="size">{{ size }}</option>
             </select>
           </div>
         </div>
+        <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
         <p>
           Available in additional colors:
           <strong>
@@ -73,6 +74,7 @@ export default {
       id: this.$route.params.id,
       quantity: 1,
       size: null,
+      showSizeRequiredMessage: false,
       tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
     };
   },
@@ -84,6 +86,11 @@ export default {
   },
   methods: {
     cartAdd() {
+      if (this.product.sizes && !this.size) {
+        this.showSizeRequiredMessage = true;
+        return;
+      }
+
       let item = this.product;
       item = { 
         ...item, 
@@ -142,6 +149,10 @@ select {
 
 .quantity {
   display: flex;
+}
+
+.size-required-message {
+  color: red;
 }
 
 @media screen and (max-width: 650px) {
