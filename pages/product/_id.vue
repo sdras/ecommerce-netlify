@@ -16,11 +16,19 @@
         <h4 class="price">{{ product.price | dollar }}</h4>
         <p>{{ product.description }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
-        <p class="quantity">
-          <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
-          <input type="number" v-model="quantity" />
-          <button class="update-num" @click="quantity++">+</button>
-        </p>
+        <div class="product-options">
+          <div class="quantity">
+            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
+            <input type="number" v-model="quantity" />
+            <button class="update-num" @click="quantity++">+</button>
+          </div>
+          <div v-if="product.sizes" class="size">
+            <select v-model="size" class="size-picker">
+              <option :value="null" disabled hidden>Size</option>
+              <option v-for="(size, key) in product.sizes" :key="key" :value="size">{{ size }}</option>
+            </select>
+          </div>
+        </div>
         <p>
           Available in additional colors:
           <strong>
@@ -64,7 +72,8 @@ export default {
     return {
       id: this.$route.params.id,
       quantity: 1,
-      tempcart: [] // this object should be the same as the json store object, with an additional param, quantity
+      size: null,
+      tempcart: [] // this object should be the same as the json store object, with additional params, quantity and size
     };
   },
   computed: {
@@ -76,7 +85,11 @@ export default {
   methods: {
     cartAdd() {
       let item = this.product;
-      item.quantity = this.quantity;
+      item = { 
+        ...item, 
+        quantity: this.quantity, 
+        size: this.size 
+      };
       this.tempcart.push(item);
       this.$store.commit("addToCart", {...item});
     }
@@ -93,10 +106,15 @@ export default {
   grid-template-columns: 1fr 2fr;
 }
 
-input {
+.product-options {
+  display: flex;
+}
+
+input,
+select {
   width: 60px;
   font-size: 25px;
-  margin: 0 10px;
+  margin: 0 5px;
   padding: 5px 10px;
 }
 
@@ -106,6 +124,20 @@ input {
   color: white;
   font-size: 20px;
   width: 45px;
+}
+
+.size {
+  margin-left: 10px;
+}
+
+.size-picker {
+  width: 130px;
+  font-size: 20px;
+  height: 100%;
+  border: 0;
+  background-color: white;
+  outline: 1px solid #ccc;
+  outline-offset: -1px;
 }
 
 .quantity {
