@@ -76,7 +76,7 @@ export default {
   methods: {
     cartAdd() {
       let item = this.product;
-      item.quantity = this.quantity;
+      item.quantity = parseInt(this.quantity);
       this.tempcart.push(item);
       this.$store.commit("addToCart", {...item});
     }
