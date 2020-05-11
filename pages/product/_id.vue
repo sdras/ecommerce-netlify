@@ -18,7 +18,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
         <p class="quantity">
           <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
-          <input type="number" v-model="quantity" />
+          <input type="text" pattern="\d+" v-model="quantity" required />
           <button class="update-num" @click="quantity++">+</button>
         </p>
         <p>
@@ -52,7 +52,7 @@
 
 <script>
 import { mapState } from "vuex";
-import StarRating from "vue-star-rating";
+import StarRating from "vue-star-rating/src/star-rating.vue";
 import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
@@ -76,7 +76,7 @@ export default {
   methods: {
     cartAdd() {
       let item = this.product;
-      item.quantity = this.quantity;
+      item.quantity = parseInt(this.quantity);
       this.tempcart.push(item);
       this.$store.commit("addToCart", {...item});
     }

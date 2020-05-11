@@ -86,6 +86,10 @@ button.pay-with-stripe {
   &:hover {
     background: #c14103;
   }
+
+  &:disabled {
+    background: #999;
+  }
 }
 
 .price {
