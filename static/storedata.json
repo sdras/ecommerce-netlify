@@ -41,6 +41,11 @@
     "review": "integrate front-end infomediaries",
     "starrating": 5,
     "price": 64.5,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "4.jpg"
   },
   {
@@ -63,6 +68,11 @@
     "review": "utilize end-to-end functionalities",
     "starrating": 4,
     "price": 19.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "6.png"
   },
   {
@@ -74,6 +84,11 @@
     "review": "enable cutting-edge e-services",
     "starrating": 3,
     "price": 130.0,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "7.png"
   },
   {
@@ -85,6 +100,11 @@
     "review": "innovate sexy portals",
     "starrating": 4,
     "price": 120.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "8.png"
   },
   {
@@ -96,6 +116,11 @@
     "review": "transform robust mindshare",
     "starrating": 5,
     "price": 20.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "9.png"
   },
   {
@@ -118,6 +143,11 @@
     "review": "repurpose robust e-business",
     "starrating": 4,
     "price": 65.0,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "11.png"
   },
   {
@@ -129,6 +159,11 @@
     "review": "redefine 24/365 eyeballs",
     "starrating": 3,
     "price": 72.0,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "12.png"
   },
   {
@@ -184,6 +219,11 @@
     "review": "architect real-time partnerships",
     "starrating": 3,
     "price": 13.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "17.png"
   },
   {
@@ -206,6 +246,11 @@
     "review": "facilitate innovative portals",
     "starrating": 3,
     "price": 154.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "19.png"
   },
   {
@@ -250,6 +295,11 @@
     "review": "enhance rich initiatives",
     "starrating": 4,
     "price": 19.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "4.jpg"
   },
   {
@@ -272,6 +322,11 @@
     "review": "aggregate granular systems",
     "starrating": 3,
     "price": 19.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "6.png"
   },
   {
@@ -283,6 +338,11 @@
     "review": "transition granular markets",
     "starrating": 3,
     "price": 190.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "7.png"
   },
   {
@@ -294,6 +354,11 @@
     "review": "generate customized e-services",
     "starrating": 4,
     "price": 20.0,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "8.png"
   },
   {
@@ -305,6 +370,11 @@
     "review": "e-enable viral web services",
     "starrating": 3,
     "price": 15.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "9.png"
   },
   {
@@ -327,6 +397,11 @@
     "review": "architect collaborative initiatives",
     "starrating": 3,
     "price": 35.99,
+    "sizes": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
     "img": "11.png"
   }
 ]
