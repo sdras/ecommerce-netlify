@@ -44,10 +44,23 @@ export const mutations = {
     let itemfound = state.cart.find(el => el.id === payload.id);
     itemfound
       ? (itemfound.quantity += payload.quantity)
-      : state.cart.push(payload);
+      : state.cart.push(payload)
   },
-  setClientSecret: (state, payload) => {
+   setClientSecret: (state, payload) => {
     state.clientSecret = payload;
+   },
+  addOneToCart: (state, payload) => {
+    let itemfound = state.cart.find(el => el.id === payload.id)
+    itemfound ? itemfound.quantity++ : state.cart.push(payload)
+  },
+  removeOneFromCart: (state, payload) => {
+    let index = state.cart.findIndex(el => el.id === payload.id)
+    state.cart[index].quantity
+      ? state.cart[index].quantity--
+      : state.cart.splice(index, 1)
+  },
+  removeAllFromCart: (state, payload) => {
+    state.cart = state.cart.filter(el => el.id !== payload.id)
   }
 };
 

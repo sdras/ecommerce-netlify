@@ -7,19 +7,30 @@
           <th>Price</th>
           <th>Quantity</th>
           <th>Total</th>
+          <th></th>
         </tr>
         <tr v-for="item in cart" :key="item.id">
           <td>
-            <img :src="`/products/${item.img}`" :alt="item.name" class="productimg" />
-            <h3 class="productname">{{ item.name }}</h3>
+            <img :src="`/products/${item.img}`" :alt="item.name" class="product-img" />
+            <h3 class="product-name">{{ item.name }}</h3>
+            <h5 v-if="item.size" class="product-size">Size: {{ item.size }}</h5>
           </td>
           <td>
             <h4 class="price">{{ item.price | dollar }}</h4>
           </td>
           <td>
-            <strong>{{ item.quantity }}</strong>
+            <button @click="removeOneFromCart(item)" class="quantity-adjust">
+              -
+            </button>
+            <strong> {{ item.quantity }}</strong>
+            <button @click="addToCart(item)" class="quantity-adjust">+</button>
           </td>
-          <td>{{ item.quantity * item.price | dollar }}</td>
+          <td>{{ (item.quantity * item.price) | dollar }}</td>
+          <td>
+            <button @click="removeAllFromCart(item)" class="delete-product">
+              x
+            </button>
+          </td>
         </tr>
       </table>
 
@@ -55,8 +66,7 @@
 
 <script>
 import AppCard from "~/components/AppCard.vue";
-import { mapState } from "vuex";
-import { mapGetters } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
   components: {
@@ -65,12 +75,23 @@ export default {
   computed: {
     ...mapState(["cart"]),
     ...mapGetters(["cartCount", "cartTotal"])
+  },
+  methods: {
+    addToCart(item) {
+      this.$store.commit("addOneToCart", item);
+    },
+    removeOneFromCart(item) {
+      this.$store.commit("removeOneFromCart", item);
+    },
+    removeAllFromCart(item) {
+      this.$store.commit("removeAllFromCart", item);
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.productimg {
+.product-img {
   float: left;
   margin-right: 15px;
   width: 100px;
@@ -106,13 +127,17 @@ th {
   padding: 10px;
 }
 
-.productname {
-  padding-top: 36px;
+.product-name,
+.product-size {
   text-align: left;
 }
 
-h1 {
-  margin-top: 40px;
+.product-name {
+  padding-top: 36px;
+}
+
+.product-size {
+  font-weight: 100;
 }
 
 .num {
@@ -122,6 +147,32 @@ h1 {
 button a {
   color: white;
   transition: 0.3s all ease;
+}
+
+.delete-product,
+.quantity-adjust:first-of-type,
+.quantity-adjust:last-of-type {
+  padding: 5px 7px;
+  border: none;
+}
+
+.quantity-adjust:first-of-type {
+  margin-right: 5px;
+}
+
+.quantity-adjust:last-of-type {
+  margin-left: 5px;
+}
+
+.delete-product:hover {
+  background-color: rgb(255, 85, 85);
+  border-radius: 100%;
+  border: none;
+}
+
+.delete-product:focus,
+.delete-product:active {
+  outline: none;
 }
 
 @media screen and (min-width: 700px) {
