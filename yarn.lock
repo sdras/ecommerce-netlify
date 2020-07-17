@@ -4545,9 +4545,9 @@ lodash.uniqueid@^4.0.1:
   integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
 
 lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.10:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loose-envify@^1.0.0:
   version "1.4.0"
@@ -7802,10 +7802,10 @@ vue-star-rating@^1.6.1:
   resolved "https://registry.yarnpkg.com/vue-star-rating/-/vue-star-rating-1.6.1.tgz#160cf66e6af4597180fd2552df5d03d590ec40d4"
   integrity sha512-JSmVx16rcxyw4Ma6YQ5DnIExyjF4IFf/ypxh3zfmtFZzE/hjswDT0fLn1vF4ERxDbAp0nHA3u51BYFbA8gyYyQ==
 
-vue-stripe-elements-plus@^0.2.10:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/vue-stripe-elements-plus/-/vue-stripe-elements-plus-0.2.10.tgz#23d57600b33e75111875fdae71afd956e866a578"
-  integrity sha512-Raa6903zyqLBP+LbNDPVIewJgb675kIFU06PlMd/idZKHt8Xd1lSKDaysl6OxvVaZFiiJa8STXaSQ0urSz949w==
+vue-stripe-elements-plus@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vue-stripe-elements-plus/-/vue-stripe-elements-plus-0.3.2.tgz#9b3835e1c61048a1405798ded66abe09f9d38084"
+  integrity sha512-Cuo+guUye1bHrwgQyU4Yb9mIEH+IKiz/QKNW7I70z1BWSIU0OjCgDHWcdBUDIgzLGip4/8FQqSa8IICKT+Lzmg==
   dependencies:
     lodash "^4.17.11"
 
