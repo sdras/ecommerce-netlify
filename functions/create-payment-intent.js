@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     // Here we will use a simple json file to represent inventory
     // but you could replace this with a DB lookup
     const storeDatabase = await axios.get(
-      "https://wizardly-sinoussi-7841d1.netlify.com/storedata.json"
+      "https://ecommerce-netlify.netlify.app/storedata.json"
     );
 
     const amount = data.items.reduce((prev, item) => {
