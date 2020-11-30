@@ -2,20 +2,24 @@
   <div class="textlockup">
     <div class="img">
       <slot name="img">
-        <img src="/shoe1.jpg" alt="shoe" />
+        <!-- <img src="/shoe1.jpg" alt="shoe" /> -->
+        <video playsinline="" type="video/webm" width="420" loop=""
+            onloadstart="this.volume=0" onmouseover="this.play()" onmouseout="this.pause()" 
+            src="https://res.cloudinary.com/sgonzalez/video/upload/c_scale,w_480/v1606716363/islaeco/islaeco.webm"
+        ></video>
       </slot>
     </div>
     <div class="new">
-      <slot name="new">New</slot>
+      <slot name="new">Nuevos</slot>
     </div>
     <div class="sale">
-      <slot name="sale">Men Shoes</slot>
+      <slot name="sale">artículos</slot>
     </div>
     <div class="collection">
-      <slot name="collection">Collection</slot>
+      <slot name="collection">zerowaste</slot>
     </div>
     <div class="details">
-      <slot name="details">Street Style New Fashion</slot>
+      <slot name="details">Estilo de Vida Ecoconsciente</slot>
     </div>
   </div>
 </template>
@@ -27,8 +31,10 @@ export default {};
 <style lang="scss" scoped>
 .textlockup {
   display: grid;
-  grid-template-columns: 50px 100px 1fr;
-  grid-template-rows: 50px 50px 100px 20px 1fr;
+  grid-template-columns: 50px 100px 300px 1fr;
+  grid-template-rows: 50px 50px 100px 20px 240px;
+  /*grid-template-columns: 50px 100px 1fr;*/
+  /*grid-template-rows: 50px 50px 100px 20px 1fr;*/
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   .new {
@@ -58,9 +64,14 @@ export default {};
   }
   .img {
     max-width: 950px;
-    grid-area: 1 / 3 / 6 / 4;
+    grid-area: 1 / 4 / 6 / 5;
     img {
-      width: 95%;
+      width: 65%;
+    }
+    video {
+        float: right;
+        margin: 5vw;
+        width: 25vw;
     }
   }
 }

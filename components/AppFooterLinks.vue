@@ -1,11 +1,11 @@
 <template>
   <section>
     <ul>
-      <li>About</li>
-      <li>Company</li>
-      <li>Locations</li>
-      <li>Contact</li>
-      <li>Hours</li>
+      <li>Nosotras</li>
+      <li>Acerca de</li>
+      <li>Location / Dirección</li>
+      <li>Contacto</li>
+      <li>Horarios</li>
     </ul>
     <ul>
       <li>Twitter</li>
@@ -14,7 +14,7 @@
       <li>LinkedIn</li>
     </ul>
     <ul>
-      <h4>Newsletter:</h4>
+      <h4>Noticias:</h4>
       <input type="text" />
     </ul>
   </section>

@@ -4,12 +4,13 @@
     <app-sales-boxes />
     <app-textlockup>
       <template v-slot:img>
-        <img src="/bag.jpg" alt="bag" />
+        <!-- <img src="/bag.jpg" alt="bag" /> -->
+        <img src="ecobottle.png" alt="bag" />
       </template>
       <template v-slot:new>50%</template>
-      <template v-slot:sale>Storewide Sale</template>
-      <template v-slot:collection>Summer</template>
-      <template v-slot:details>All accessories</template>
+      <template v-slot:sale>Venta de</template>
+      <template v-slot:collection>Verano</template>
+      <template v-slot:details>Todos los utensilios</template>
     </app-textlockup>
     <app-featured-products />
   </div>

@@ -3,9 +3,9 @@
     <section v-if="cartCount > 0">
       <table>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
           <th>Total</th>
           <th></th>
         </tr>
@@ -56,9 +56,9 @@
     </section>
 
     <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
+      <p>El carrito está vacio, ¡agregale algo!</p>
       <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back Home</nuxt-link>
+        <nuxt-link exact to="/">Volver al inicio</nuxt-link>
       </button>
     </section>
   </div>

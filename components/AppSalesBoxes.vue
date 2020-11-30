@@ -14,19 +14,19 @@ export default {
     return {
       boxes: [
         {
+          icon: "/icon-service.svg",
+          heading: "Atención al detalle",
+          details: "Asegurar cubrir necesidades"
+        },
+        {
           icon: "/icon-package.svg",
-          heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          heading: "Envíos en la capital",
+          details: "Envíos en 3 dias laborables"
         },
         {
           icon: "/icon-cal.svg",
-          heading: "24/7 Customer Service",
-          details: "Call us any time"
-        },
-        {
-          icon: "/icon-service.svg",
-          heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
+          heading: "Servicio al cliente 24/7",
+          details: "Escribe cuando sea"
         }
       ]
     };

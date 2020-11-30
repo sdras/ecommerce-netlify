@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>Productos más populares</span>
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
