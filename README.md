@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/sdras/ecommerce-netlify)
+
 # 🛍 Ecommerce Store with Netlify Functions and Stripe
 
 > A serverless function to process stripe payments with Nuxt, Netlify, and Lambda
