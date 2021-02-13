@@ -1,0 +1,26 @@
+# test the deployed Netlify site
+name: e2e
+on:
+  workflow_dispatch:
+    inputs:
+      siteName:
+        description: Netlify Site Name
+        required: false
+      deployPrimeUrl:
+        description: Deployed URL
+        required: true
+jobs:
+  show-event:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Testing url ${{ github.event.inputs.deployPrimeUrl }}"
+
+      # - name: Checkout ⬇️
+      #   uses: actions/checkout@v2
+
+      # # test the deployed site using
+      # # https://github.com/cypress-io/github-action
+      # - name: Cypress run 🏃‍♀️
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     config: baseUrl=${{ github.event.inputs.deployPrimeUrl }}
