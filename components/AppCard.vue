@@ -26,7 +26,7 @@
         class="stripe-card"
         id="card"
         :class="{ complete }"
-        stripe="pk_test_8ssZgwB2PiH0ajJksD2gVbsG00u7Y3IDPv"
+        stripe="pk_test_5ThYi0UvX3xwoNdgxxxTxxrG"
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
@@ -56,7 +56,7 @@
     </div>
   </div>
 </template>
- 
+
 <script>
 import { Card, handleCardPayment } from "vue-stripe-elements-plus";
 
@@ -117,8 +117,8 @@ export default {
     }
   }
 };
-</script> 
- 
+</script>
+
 <style lang="scss" scoped>
 input,
 button {
@@ -143,4 +143,4 @@ button {
 .stripe-card.complete {
   border-color: green;
 }
-</style> 
+</style>
