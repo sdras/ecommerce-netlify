@@ -55,8 +55,9 @@ describe('e-commerce site', () => {
     cy.contains('.success', 'Success!').should('be.visible')
 
     // automatically resets to empty cart
+    cy.scrollTo('top')
     cy.get('nav .carttotal', {timeout: 6000}).should('not.exist') // the little badge is gone
-    cy.get('.empty-cart').should('be.visible')
+    cy.contains('Your cart is empty, fill it up!').should('be.visible')
   })
 
   /**
