@@ -56,7 +56,7 @@
     </section>
 
     <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
+      <p class="empty-cart">Your cart is empty, fill it up!</p>
       <button class="pay-with-stripe">
         <nuxt-link exact to="/">Back Home</nuxt-link>
       </button>

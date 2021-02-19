@@ -1,0 +1,7 @@
+{
+  "fixturesFolder": false,
+  "supportFile": false,
+  "pluginsFile": false,
+  "baseUrl": "https://tested-ecommerce-store.netlify.app/",
+  "chromeWebSecurity": false
+}
