@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "cypress": "6.5.0",
-    "netlify-plugin-github-dispatch": "1.0.0",
+    "netlify-plugin-github-dispatch": "1.0.2",
     "nodemon": "^1.18.9",
     "prettier": "2.2.1"
   }
