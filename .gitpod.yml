@@ -1,0 +1,15 @@
+ports:
+  - port: 3001
+    onOpen: open-preview
+  - port: 3000
+    onOpen: ignore
+
+tasks:
+  - name: json
+    init: npm i &&  gp sync-done bundle
+    command: |
+      npm i -g json-server && json-server --watch db.json --port 3000 --no-cors 
+      npm run generate
+  - name: nuxt
+    init: gp sync-await bundle
+    command: npm run dev
