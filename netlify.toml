@@ -1,2 +1,5 @@
 [build]
   functions = "functions"
+[context.dev]
+  NODE_ENV = "development"
+  environment = {TIGRIS_URI = "localhost:8081", TIGRIS_CLIENT_ID = "", TIGRIS_CLIENT_SECRET = ""}  

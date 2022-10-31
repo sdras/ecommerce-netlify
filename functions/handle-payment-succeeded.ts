@@ -3,7 +3,7 @@
 // For more information read https://stripe.com/docs/webhooks
 require("dotenv").config();
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripeHandlePayment = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // Create your webhook in the Stripe dashboard at https://dashboard.stripe.com/webhooks
 // Use the secret listed in the "Signing secret" section
@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
 
   try {
     // Verifies that the event was sent by Stripe and deserializes the event
-    stripeEvent = stripe.webhooks.constructEvent(
+    stripeEvent = stripeHandlePayment.webhooks.constructEvent(
       event.body,
       sig,
       endpointSecret
