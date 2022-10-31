@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "target": "ES2018",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "resolveJsonModule": true,
+      "lib": [
+        "ESNext",
+        "ESNext.AsyncIterable",
+        "DOM"
+      ],
+      "esModuleInterop": true,
+      "allowJs": true,
+      "sourceMap": true,
+      "noEmit": true,
+      "baseUrl": ".",
+      "paths": {
+        "~/*": [
+          "./*"
+        ],
+        "@/*": [
+          "./*"
+        ]
+      },
+      "types": [
+        "@types/node",
+        "@nuxt/types"
+      ]
+    },
+    "exclude": [
+      "node_modules"
+    ],
+    "ts-node": {
+      "compilerOptions": {
+        "module": "commonjs"
+      }
+    }
+  }

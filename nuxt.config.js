@@ -6,7 +6,6 @@ let dynamicRoutes = () => {
 }
 
 export default {
-  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -59,5 +58,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  buildModules: ['@nuxt/typescript-build']
 }

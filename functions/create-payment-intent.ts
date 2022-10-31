@@ -1,13 +1,18 @@
 // An endpoint that calculates the order total and creates a 
 // PaymentIntent on Stripe 
 
+import { Tigris } from "@tigrisdata/core"
+import { Product } from "~/models/tigris/catalog/products"
+
 require("dotenv").config();
 const axios = require("axios");
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY),
+const stripeCreatePayment = require("stripe")(process.env.STRIPE_SECRET_KEY),
   headers = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type"
   };
+
+const tigrisC = new Tigris();
 
 exports.handler = async (event, context) => {
   // CORS
@@ -33,28 +38,33 @@ exports.handler = async (event, context) => {
     };
   }
 
+  const products = tigrisC.getDatabase("catalog").getCollection<Product>("products");
+
   // Stripe payment processing begins here
   try {
     // Always calculate the order amount on your server to prevent customers
     // from manipulating the order amount from the client
     // Here we will use a simple json file to represent inventory
     // but you could replace this with a DB lookup
-    const storeDatabase = await axios.get(
-      "https://ecommerce-netlify.netlify.app/storedata.json"
-    );
+    let amount = 0;
+    for (let item of data.items) {
+      const product = await products.findOne({
+        id: item.id
+      })
 
-    const amount = data.items.reduce((prev, item) => {
-      // lookup item information from "database" and calculate total amount
-      const itemData = storeDatabase.data.find(
-        storeItem => storeItem.id === item.id
-      );
-      return prev + itemData.price * 100 * item.quantity;
-    }, 0);
+      if (product == undefined) {
+        continue
+      }
+
+      amount = amount + product.price * item.quantity;
+    }
+
+    console.log('amount charging ', amount);
 
     // Create a PaymentIntent on Stripe
     // A PaymentIntent represents your customer's intent to pay
     // and needs to be confirmed on the client to finalize the payment
-    const paymentIntent = await stripe.paymentIntents.create({
+    const paymentIntent = await stripeCreatePayment.paymentIntents.create({
       currency: "usd",
       amount: amount,
       description: "Order from store"
