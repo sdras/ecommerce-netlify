@@ -1486,12 +1486,15 @@
   "resolved" "https://registry.npmjs.org/@protobufjs/utf8/-/utf8-1.1.0.tgz"
   "version" "1.1.0"
 
-"@tigrisdata/core@1.0.0-beta.13":
-  "integrity" "sha512-kJrbhT3pM+bgXOIa6DimdiJsVqgE3O6ObxmtwVrjdDvNiVvXCZwOt1TZrD+HGyyvUNARoYpFX/SJBb7H6SGLUw=="
-  "resolved" "https://registry.npmjs.org/@tigrisdata/core/-/core-1.0.0-beta.13.tgz"
-  "version" "1.0.0-beta.13"
+"@tigrisdata/core@1.0.0-beta.16":
+  "integrity" "sha512-EQ+eYri62mBh+bBplZjeGzpyQ91P044NlpDb8MeruwjdCiC2efiNuRsYnbnTP7/4mgc2FvUAKjbP3vHtmaOT6w=="
+  "resolved" "https://registry.npmjs.org/@tigrisdata/core/-/core-1.0.0-beta.16.tgz"
+  "version" "1.0.0-beta.16"
   dependencies:
     "@grpc/grpc-js" "^1.6.10"
+    "app-root-path" "^3.1.0"
+    "chalk" "4.1.2"
+    "dotenv" "^16.0.3"
     "google-protobuf" "^3.21.0"
     "json-bigint" "^1.0.0"
     "typescript" "^4.7.2"
@@ -2192,6 +2195,11 @@
     "micromatch" "^3.1.4"
     "normalize-path" "^2.1.1"
 
+"app-root-path@^3.1.0":
+  "integrity" "sha512-biN3PwB2gUtjaYy/isrU3aNWI5w+fAfvHkSvCKeQGxhmYpwKFUxudR3Yya+KqVRHBmEDYh+/lTozYCFbmzX4nA=="
+  "resolved" "https://registry.npmjs.org/app-root-path/-/app-root-path-3.1.0.tgz"
+  "version" "3.1.0"
+
 "aproba@^1.1.1":
   "integrity" "sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw=="
   "resolved" "https://registry.npmjs.org/aproba/-/aproba-1.2.0.tgz"
@@ -2798,7 +2806,7 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
-"chalk@^4.1.0", "chalk@^4.1.1", "chalk@^4.1.2":
+"chalk@^4.1.0", "chalk@^4.1.1", "chalk@^4.1.2", "chalk@4.1.2":
   "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
   "version" "4.1.2"
@@ -3714,6 +3722,11 @@
   "version" "5.3.0"
   dependencies:
     "is-obj" "^2.0.0"
+
+"dotenv@^16.0.3":
+  "integrity" "sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
+  "version" "16.0.3"
 
 "dotenv@^8.0.0":
   "integrity" "sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g=="

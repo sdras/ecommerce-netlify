@@ -2,7 +2,7 @@ import { Handler } from "@netlify/functions";
 import { Tigris } from "@tigrisdata/core";
 import { Product } from "~/models/tigris/catalog/products";
 
-const tigris = new Tigris({serverUrl: process.env.TIGRIS_URI, clientId: process.env.TIGRIS_CLIENT_ID, clientSecret: process.env.TIGRIS_CLIENT_SECRET});
+const tigris = new Tigris();
 
 const handler: Handler = async(event, context) => {
     const searchReq = JSON.parse(event.body);

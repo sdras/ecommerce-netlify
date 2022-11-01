@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@netlify/functions": "^1.3.0",
-    "@tigrisdata/core": "1.0.0-beta.13",
+    "@tigrisdata/core": "1.0.0-beta.16",
     "axios": "^0.21.1",
     "dotenv": "^8.0.0",
     "gsap": "^3.6.0",
