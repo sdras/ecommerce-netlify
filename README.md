@@ -1,3 +1,5 @@
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tigrisdata/tigris-netlify-ecommerce&utm_source=github)
+
 # 🛍 Ecommerce Store with Netlify Functions and Stripe
 
 > A serverless function to process stripe payments with Nuxt, Netlify, and Lambda
