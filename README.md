@@ -1,6 +1,6 @@
 # 🛍 Ecommerce Store with Netlify Functions, Tigris Cloud and Stripe
 
-> A serverless function to process stripe payments with Nuxt, Netlify, Tigris Cloud and Lambda. Tigris Cloud is used as a backend to the store and providing storage, search, query for the product items.
+> A serverless function to process stripe payments with Nuxt, Netlify, Tigris Cloud and Lambda. Tigris stores the product catalog and provides Real-time Search.
 
 Demo site is here: [E-Commerce Store](https://ecommerce-netlify.netlify.com/)
 
@@ -15,10 +15,10 @@ and follow instructions to deploy app to your Netlify account
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tigrisdata/tigris-netlify-ecommerce&utm_source=github)
 
 
-There are two articles explaining how this site is set up:
+Following articles are explaining how this site is set up:
+* Tigris Docs: [Query](https://docs.tigrisdata.com/typescript/documents/query), [Search](https://docs.tigrisdata.com/typescript/documents/search), [Auth](https://docs.tigrisdata.com/auth/)
 * Explanation of Netlify Functions and Stripe: [Let's Build a JAMstack E-Commerce Store with Netlify Functions](https://css-tricks.com/lets-build-a-jamstack-e-commerce-store-with-netlify-functions/)
 * Explanation of dynamic routing in Nuxt for the individual product pages: [Creating Dynamic Routes in Nuxt Application](https://css-tricks.com/creating-dynamic-routes-in-a-nuxt-application/)
-* Tigris Documentation: [Query](https://docs.tigrisdata.com/typescript/documents/query), [Search](https://docs.tigrisdata.com/typescript/documents/search), [Auth] (https://docs.tigrisdata.com/auth/)
 
 ## 📖 Building & Running locally
 
