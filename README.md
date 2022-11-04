@@ -15,7 +15,7 @@ Demo site is here: [E-Commerce Store](https://nuxt-ecommerce-netlify.netlify.app
 # ⚙️ Deploying the site
 
 All you need is a [Github](https://github.com), 
-[Netlify][https://www.netlify.com/] and Tigris account
+[Netlify](https://www.netlify.com/) and Tigris account
 ([sign up for a free account](https://www.tigrisdata.com/jamstack#signup-form)). 
 Now, Hit "Deploy" and follow instructions to deploy app to your Netlify account.
 
