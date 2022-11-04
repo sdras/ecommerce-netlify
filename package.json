@@ -5,10 +5,13 @@
   "author": "sdras",
   "private": true,
   "scripts": {
-    "dev": "npm run setup:dev && nuxt dev",
-    "build": "nuxt build && npm run setup:prod",
+    "predev": "npm run setup:dev",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "postbuild": "npm run setup:prod",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "postgenerate": "npm run setup:prod",
     "setup": "npx ts-node scripts/setup.ts",
     "setup:dev": "NODE_ENV=development npm run setup",
     "setup:prod": "NODE_ENV=production npm run setup"
@@ -19,9 +22,11 @@
     "axios": "^0.21.1",
     "dotenv": "^8.0.0",
     "gsap": "^3.6.0",
+    "netlify-cli": "^12.0.11",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.15.8",
+    "nuxt": "^2.14.0",
     "stripe": "^8.1.0",
+    "ts-node": "^10.9.1",
     "uuid": "^3.3.2",
     "vue-star-rating": "^1.6.1",
     "vue-stripe-elements-plus": "^0.3.2"
@@ -30,8 +35,11 @@
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "fibers": "^5.0.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^2.0.20",
     "sass": "^1.39.2",
-    "sass-loader": "10"
+    "sass-loader": "^10.3.1",
+    "ts-loader": "^8.2.0",
+    "typescript": "4.8.4",
+    "webpack": "^4.46.0"
   }
 }

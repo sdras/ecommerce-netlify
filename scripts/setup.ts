@@ -1,8 +1,8 @@
-import { Tigris, TigrisClientConfig } from '@tigrisdata/core';
-import data from '../static/storedata.json';
 import * as dotenv from "dotenv";
-
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+
+import { Tigris } from '@tigrisdata/core';
+import data from '../static/storedata.json';
 
 async function main() {
   if (!process.env.TIGRIS_URI) {
@@ -19,4 +19,11 @@ async function main() {
   console.log(`Inserted ${inserted.length} documents`);
 }
 
-main();
+main()
+  .then(async () => {
+    console.log("Setup complete ...");
+  })
+  .catch(async (e) => {
+    console.error(e);
+    process.exit(1);
+  });

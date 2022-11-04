@@ -2,8 +2,10 @@
   functions = "functions"
 [context.dev]
   NODE_ENV = "development"
-  environment = {TIGRIS_URI = "localhost:8081", TIGRIS_CLIENT_ID = "", TIGRIS_CLIENT_SECRET = ""}
+  environment = {TIGRIS_URI = "localhost:8081"}
 [template.environment]
   TIGRIS_URI = "change me for your tigris uri"
   TIGRIS_CLIENT_ID = "change me for your tigris client id"
-  TIGRIS_CLIENT_SECRET = "change me for your tigris client secret"  
+  TIGRIS_CLIENT_SECRET = "change me for your tigris client secret"
+[functions]
+  external_node_modules = ["app-root-path", "@tigrisdata/core"]
