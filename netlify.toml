@@ -4,7 +4,7 @@
   NODE_ENV = "development"
   environment = {TIGRIS_URI = "localhost:8081"}
 [template.environment]
-  TIGRIS_URI = "change me for your tigris uri"
+  TIGRIS_URI = "api.preview.tigrisdata.cloud"
   TIGRIS_CLIENT_ID = "change me for your tigris client id"
   TIGRIS_CLIENT_SECRET = "change me for your tigris client secret"
 [functions]
