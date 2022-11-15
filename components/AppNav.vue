@@ -16,9 +16,6 @@
           <nuxt-link to="/men">Men</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/search">Search</nuxt-link>
-        </li>
-        <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
           <nuxt-link to="/cart">Cart</nuxt-link>
         </li>

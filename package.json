@@ -5,6 +5,7 @@
   "author": "sdras",
   "private": true,
   "scripts": {
+    "load": "npm run setup:dev",
     "predev": "npm run setup:dev",
     "dev": "nuxt dev",
     "build": "nuxt build",

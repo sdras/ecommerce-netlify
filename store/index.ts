@@ -3,7 +3,6 @@ import axios from "axios";
 export const state = () => ({
   cartUIStatus: "idle",
   storedata: [],
-  searchdata: [],
   cart: [],
   clientSecret: "" // Required to initiate the payment from the client
 });
@@ -12,7 +11,6 @@ export const getters = {
   featuredProducts: state => state.storedata.slice(0, 3),
   women: state => state.storedata.filter(el => el.gender === "Female"),
   men: state => state.storedata.filter(el => el.gender === "Male"),
-  searchResult: state => state.searchdata,
   cartCount: state => {
     if (!state.cart.length) return 0;
     return state.cart.reduce((ac, next) => ac + next.quantity, 0);
@@ -36,9 +34,6 @@ export const getters = {
 export const mutations = {
   setProducts: (state, payload) => {
     state.storedata = payload;
-  },
-  searchProducts: (state, payload) => {
-    state.searchdata = payload;
   },
   updateCartUI: (state, payload) => {
     state.cartUIStatus = payload;
@@ -102,27 +97,6 @@ export const actions = {
       const response = await axios.post("/.netlify/functions/read-all-products");
       if (response.data) {
         commit("setProducts", response.data);
-      }
-    } catch (e) {
-      console.log("error", e);
-    }
-  },
-
-  async searchProducts({ commit }, keyword) {
-    try {
-      const response = await axios.post(
-        "/.netlify/functions/search-products",
-        {
-          q: keyword,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json"
-          }
-        }
-      );
-      if (response.data) {
-        commit("searchProducts", response.data);
       }
     } catch (e) {
       console.log("error", e);
