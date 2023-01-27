@@ -5,15 +5,13 @@
   "author": "sdras",
   "private": true,
   "scripts": {
-    "load": "npm run setup:dev",
+    "load": "npm run setup",
     "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "postgenerate": "npm run setup:prod",
     "setup": "npx ts-node scripts/setup.ts",
-    "setup:dev": "NODE_ENV=development npm run setup",
-    "setup:prod": "NODE_ENV=production npm run setup",
     "predev": "npm run setup",
     "postbuild": "npm run setup"
   },
