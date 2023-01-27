@@ -1,25 +1,23 @@
-// An endpoint that calculates the order total and creates a 
-// PaymentIntent on Stripe 
+// An endpoint that calculates the order total and creates a
+// PaymentIntent on Stripe
 
-import { Tigris } from "@tigrisdata/core"
-import { Product } from "~/models/tigris/catalog/products"
+import tigrisDB from "~/lib/tigris";
+import { Product } from "../db/models/products";
 
 require("dotenv").config();
 const axios = require("axios");
 const stripeCreatePayment = require("stripe")(process.env.STRIPE_SECRET_KEY),
   headers = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type"
+    "Access-Control-Allow-Headers": "Content-Type",
   };
-
-const tigrisC = new Tigris();
 
 exports.handler = async (event, context) => {
   // CORS
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
-      headers
+      headers,
     };
   }
 
@@ -33,12 +31,12 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "missing information"
-      })
+        status: "missing information",
+      }),
     };
   }
 
-  const products = tigrisC.getDatabase("catalog").getCollection<Product>("products");
+  const productCollection = tigrisDB.getCollection<Product>(Product);
 
   // Stripe payment processing begins here
   try {
@@ -48,18 +46,18 @@ exports.handler = async (event, context) => {
     // but you could replace this with a DB lookup
     let amount = 0;
     for (let item of data.items) {
-      const product = await products.findOne({
-        id: item.id
-      })
+      const product = await productCollection.findOne({
+        filter: { id: item.id },
+      });
 
       if (product == undefined) {
-        continue
+        continue;
       }
 
       amount = amount + product.price * item.quantity;
     }
 
-    console.log('amount charging ', amount);
+    console.log("amount charging ", amount);
 
     // Create a PaymentIntent on Stripe
     // A PaymentIntent represents your customer's intent to pay
@@ -67,7 +65,7 @@ exports.handler = async (event, context) => {
     const paymentIntent = await stripeCreatePayment.paymentIntents.create({
       currency: "usd",
       amount: amount,
-      description: "Order from store"
+      description: "Order from store",
     });
 
     // Send the client_secret to the client
@@ -77,8 +75,8 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        clientSecret: paymentIntent.client_secret
-      })
+        clientSecret: paymentIntent.client_secret,
+      }),
     };
   } catch (err) {
     console.log(err);
@@ -87,8 +85,8 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: err
-      })
+        status: err,
+      }),
     };
   }
 };

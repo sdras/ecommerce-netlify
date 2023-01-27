@@ -1,29 +1,18 @@
-import * as dotenv from "dotenv";
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
-
-import { Tigris } from '@tigrisdata/core';
-import data from '../static/storedata.json';
+import { loadEnvConfig } from "@next/env";
+import { Tigris } from "@tigrisdata/core";
+import { Product } from "../db/models/products"
 
 async function main() {
-  if (!process.env.TIGRIS_URI) {
-    console.log('Cannot find TIGRIS_URI environment variable ');
-    process.exit(1);
-  }
-  // setup client & register schemas
-  const tigrisClient = new Tigris();
-  await tigrisClient.registerSchemas('models/tigris');
+  // load environment variables
+  loadEnvConfig(process.cwd());
 
-  // load some data in products collection
-  const products = tigrisClient.getDatabase("catalog").getCollection("products");
-  const inserted = await products.insertOrReplaceMany(data);
-  console.log(`Inserted ${inserted.length} documents`);
+  // setup client
+  const tigrisClient = new Tigris();
+  // ensure branch exists, create it if it needs to be created dynamically
+  await tigrisClient.getDatabase().initializeBranch();
+  // register schemas
+  await tigrisClient.registerSchemas([Product]);
+  console.log('setup completed')
 }
 
-main()
-  .then(async () => {
-    console.log("Setup complete ...");
-  })
-  .catch(async (e) => {
-    console.error(e);
-    process.exit(1);
-  });
+main();

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
       "target": "ES2018",
       "module": "ESNext",
       "moduleResolution": "Node",

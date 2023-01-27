@@ -95,6 +95,7 @@ export const actions = {
   async getAllProducts({ commit }) {
     try {
       const response = await axios.post("/.netlify/functions/read-all-products");
+      console.log(response)
       if (response.data) {
         commit("setProducts", response.data);
       }

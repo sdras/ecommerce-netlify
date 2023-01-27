@@ -1,14 +1,13 @@
 import { Handler } from "@netlify/functions";
-import { Tigris } from "@tigrisdata/core";
-import { Product } from "~/models/tigris/catalog/products";
-
-const tigrisClient = new Tigris();
+import tigrisDB from "~/lib/tigris";
+import { Product } from "~/db/models/products";
 
 const handler: Handler = async (event, context) => {
-    const collection = tigrisClient.getDatabase("catalog").getCollection<Product>("products");
+    const productCollection = tigrisDB.getCollection<Product>(Product);
 
     try {
-        const productCursor = collection.findMany();
+        const productCursor = productCollection.findMany();
+        console.log(productCursor)
         const products = await productCursor.toArray();
         return {
             statusCode: 200,
