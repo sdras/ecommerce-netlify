@@ -10,30 +10,30 @@ export class Product {
   @PrimaryKey(TigrisDataTypes.INT32, { order: 1, autoGenerate: true })
   id!: number;
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   color: string;
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   description: string;
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   gender: string;
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   name: string;
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   reviews: string;
 
-  @Field()
+  @Field(TigrisDataTypes.NUMBER)
   startrating: number;
 
-  @Field()
+  @Field(TigrisDataTypes.NUMBER)
   price: number;
 
   @Field(TigrisDataTypes.ARRAY,  { elements: TigrisDataTypes.STRING })
   sizes: Array<string>
 
-  @Field()
+  @Field(TigrisDataTypes.STRING)
   img: string;
 }

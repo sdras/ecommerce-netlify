@@ -7,7 +7,6 @@ const handler: Handler = async (event, context) => {
 
     try {
         const productCursor = productCollection.findMany();
-        console.log(productCursor)
         const products = await productCursor.toArray();
         return {
             statusCode: 200,
