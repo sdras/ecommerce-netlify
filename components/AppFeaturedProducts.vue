@@ -20,6 +20,7 @@
 export default {
   computed: {
     featuredProducts() {
+      console.log(this.$store.getters.featuredProducts)
       return this.$store.getters.featuredProducts;
     }
   }

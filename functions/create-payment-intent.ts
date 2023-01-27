@@ -1,12 +1,15 @@
-// An endpoint that calculates the order total and creates a 
-// PaymentIntent on Stripe 
+// An endpoint that calculates the order total and creates a
+// PaymentIntent on Stripe
+
+import tigrisDB from "~/lib/tigris";
+import { Product } from "../db/models/products";
 
 require("dotenv").config();
 const axios = require("axios");
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY),
+const stripeCreatePayment = require("stripe")(process.env.STRIPE_SECRET_KEY),
   headers = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type"
+    "Access-Control-Allow-Headers": "Content-Type",
   };
 
 exports.handler = async (event, context) => {
@@ -14,7 +17,7 @@ exports.handler = async (event, context) => {
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
-      headers
+      headers,
     };
   }
 
@@ -28,10 +31,12 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: "missing information"
-      })
+        status: "missing information",
+      }),
     };
   }
+
+  const productCollection = tigrisDB.getCollection<Product>(Product);
 
   // Stripe payment processing begins here
   try {
@@ -39,25 +44,28 @@ exports.handler = async (event, context) => {
     // from manipulating the order amount from the client
     // Here we will use a simple json file to represent inventory
     // but you could replace this with a DB lookup
-    const storeDatabase = await axios.get(
-      "https://ecommerce-netlify.netlify.app/storedata.json"
-    );
+    let amount = 0;
+    for (let item of data.items) {
+      const product = await productCollection.findOne({
+        filter: { id: item.id },
+      });
 
-    const amount = data.items.reduce((prev, item) => {
-      // lookup item information from "database" and calculate total amount
-      const itemData = storeDatabase.data.find(
-        storeItem => storeItem.id === item.id
-      );
-      return prev + itemData.price * 100 * item.quantity;
-    }, 0);
+      if (product == undefined) {
+        continue;
+      }
+
+      amount = amount + product.price * item.quantity;
+    }
+
+    console.log("amount charging ", amount);
 
     // Create a PaymentIntent on Stripe
     // A PaymentIntent represents your customer's intent to pay
     // and needs to be confirmed on the client to finalize the payment
-    const paymentIntent = await stripe.paymentIntents.create({
+    const paymentIntent = await stripeCreatePayment.paymentIntents.create({
       currency: "usd",
       amount: amount,
-      description: "Order from store"
+      description: "Order from store",
     });
 
     // Send the client_secret to the client
@@ -67,8 +75,8 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        clientSecret: paymentIntent.client_secret
-      })
+        clientSecret: paymentIntent.client_secret,
+      }),
     };
   } catch (err) {
     console.log(err);
@@ -77,8 +85,8 @@ exports.handler = async (event, context) => {
       statusCode: 400,
       headers,
       body: JSON.stringify({
-        status: err
-      })
+        status: err,
+      }),
     };
   }
 };

@@ -1,12 +1,9 @@
-import data from './static/storedata.json'
-let dynamicRoutes = () => {
-  return new Promise(resolve => {
-    resolve(data.map(el => `product/${el.id}`))
-  })
-}
-
 export default {
-  mode: 'universal',
+  /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -23,17 +20,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap'
       }
     ]
-  },
-  generate: {
-    routes: dynamicRoutes
   },
   /*
    ** Customize the progress-bar color
@@ -55,9 +49,6 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  }
+  },
+  buildModules: ['@nuxt/typescript-build']
 }

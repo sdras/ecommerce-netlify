@@ -1,9 +1,8 @@
 import axios from "axios";
-import data from "~/static/storedata.json";
 
 export const state = () => ({
   cartUIStatus: "idle",
-  storedata: data,
+  storedata: [],
   cart: [],
   clientSecret: "" // Required to initiate the payment from the client
 });
@@ -33,6 +32,9 @@ export const getters = {
 };
 
 export const mutations = {
+  setProducts: (state, payload) => {
+    state.storedata = payload;
+  },
   updateCartUI: (state, payload) => {
     state.cartUIStatus = payload;
   },
@@ -84,6 +86,17 @@ export const actions = {
         // Store a reference to the client secret created by the PaymentIntent
         // This secret will be used to finalize the payment from the client
         commit("setClientSecret", result.data.clientSecret);
+      }
+    } catch (e) {
+      console.log("error", e);
+    }
+  },
+
+  async getAllProducts({ commit }) {
+    try {
+      const response = await axios.post("/.netlify/functions/read-all-products");
+      if (response.data) {
+        commit("setProducts", response.data);
       }
     } catch (e) {
       console.log("error", e);
